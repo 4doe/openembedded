@@ -14,8 +14,8 @@ MACHINE_KERNEL_PR_append = ".${SRCDATE}.0"
 
 TECHNOMATE_KERNEL_GCC = "4.4.3"
 DOWNLOADMACHINE = "${MACHINE}"
-DOWNLOADMACHINE_tmtwin = "twin"
 
+# if module install inherit
 inherit module
 
 do_compile() {
@@ -25,7 +25,7 @@ do_strip_modules() {
 }
 
 #SRC_URI = "http://archive.vuplus.com/download/drivers/vuplus-dvb-modules-${DOWNLOADMACHINE}-${KV}-${VUPLUS_KERNEL_GCC}-${SRCDATE}.tar.gz"
-SRC_URI = "http://archive.vuplus.com/download/drivers/vuplus-dvb-modules-${DOWNLOADMACHINE}-${KV}-${VUPLUS_KERNEL_GCC}-${SRCDATE}.tar.gz"
+SRC_URI = "http://opengit.homelinux.com/pub/download/drivers/technomate-dvb-modules-${MACHINE}-${KV}-${TECHNOMATE_KERNEL_GCC}-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
 
