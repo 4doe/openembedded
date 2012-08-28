@@ -1,7 +1,7 @@
 
 #take care when you do changes on MACHINE_ESSENTIAL_EXTRA_RDEPENDS/RRECOMMENDS you have to increment the recipes/tasks/task-boot.bb PR
 # NOTE : tmtwin include kernel , driver , bootloader
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "kernel technomate-dvb-modules tm-bootloader"
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "kernel technomate-dvb-modules technomate-logo technomate-bootloader"
 
 DVBPROVIDER = "kernel"
 
@@ -67,7 +67,7 @@ MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096 -F"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 IMAGEDIR ?= "${MACHINE}"
-EXTRA_IMAGECMD_COMPAT = " --eraseblock=0x20000 -n -l "
+EXTRA_IMAGECMD_COMPAT = " --eraseblock=0x20000 -n -l --pagesize=0x800 "
 
 IMAGE_CMD_ubi_prepend = " \
         mkfs.jffs2 --root=${IMAGE_ROOTFS}/boot --faketime \
@@ -76,15 +76,19 @@ IMAGE_CMD_ubi_prepend = " \
         ${EXTRA_IMAGECMD_COMPAT}; rm -rf ${IMAGE_ROOTFS}/boot/*; \
         "
 
+# NOTE : tmtwin path directory and making image copy
+
 IMAGE_CMD_ubi_append = "; \
-        gzip -f -c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz; \
-        mkdir -p ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/cfe; \
-        cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/cfe/oe_rootfs.bin; \
-        cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/cfe/oe_kernel.bin; \
-        cd ${DEPLOY_DIR_IMAGE}; \
-        zip ${IMAGE_NAME}_usb.zip update/${UPDATE_DIR}/cfe*; \
-        rm -rf update; \
-        "
+		gzip -f -c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz; \
+		mkdir -p ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe; \
+		cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_rootfs.bin; \
+		cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_kernel.bin; \
+		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.cfe.bin ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/cfe.bin; \
+		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.splash.bmp ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/splash.bmp; \
+		cd ${DEPLOY_DIR_IMAGE}; \
+		zip ${IMAGE_NAME}_usb.zip ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/*; \
+		rm -rf update; \
+"
 
 TARGET_FPU = "hard"
 
