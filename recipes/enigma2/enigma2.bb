@@ -89,8 +89,22 @@ PR = "r36"
 # NOTE : OpenPLi 4D enigma2 source
 
 ENIGMA2_BRANCH ?= "master"
-SRC_URI = "git://openpli.git.sourceforge.net/gitroot/openpli/enigma2;protocol=git;branch=${ENIGMA2_BRANCH}"
-# SRC_URI = "git://${HOME}/pli/enigma2;protocol=file"
+#SRC_URI = "git://openpli.git.sourceforge.net/gitroot/openpli/enigma2;protocol=git;branch=${ENIGMA2_BRANCH}"
+SRC_URI = "git://opengit.homelinux.com/enigma2;protocol=git;branch=${ENIGMA2_BRANCH}"
+
+#@ NOTE : custom model added section
+#@ 20120830
+
+SRC_URI_append_tmtwin = " \
+ 						file://arrowdown.png \
+						file://arrowleft.png \
+						file://arrowright.png \
+						file://arrowup.png \
+						file://keymap.xml \
+						file://rcold.png \
+						file://rc.png \
+						file://rcpositions.xml
+						 "
 
 S = "${WORKDIR}/git"
 
@@ -169,12 +183,29 @@ do_install_append() {
 	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
 }
 
+# NOTE : maybe bm7025 dream box area
+# 20120830
+
 # On the 7025, put the enigma files into a zip archive
-do_install_append_dm7025() {
-	install -d ${D}/usr/share/keymaps
-	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
-	cd ${D}/usr/lib/enigma2/python/
-	zip -m -r -9 enigma.zip *.pyo Screens/*.pyo Tools/*.pyo Components/*.pyo Components/*/*.pyo
+#do_install_append_dm7025() {
+#	install -d ${D}/usr/share/keymaps
+#	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
+#	cd ${D}/usr/lib/enigma2/python/
+#	zip -m -r -9 enigma.zip *.pyo Screens/*.pyo Tools/*.pyo Components/*.pyo Components/*/*.pyo
+#}
+
+# NOTE : tmtwin model default picture, key and rcposition
+# 20120830
+
+do_install_append_tmtwin{
+	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0644 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0644 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
 }
 
 python populate_packages_prepend () {
