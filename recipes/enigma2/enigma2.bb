@@ -86,6 +86,8 @@ PV = "2.7+git${SRCPV}"
 PKGV = "2.7+git${GITPKGV}"
 PR = "r36"
 
+# NOTE : OpenPLi 4D enigma2 source
+
 ENIGMA2_BRANCH ?= "master"
 SRC_URI = "git://openpli.git.sourceforge.net/gitroot/openpli/enigma2;protocol=git;branch=${ENIGMA2_BRANCH}"
 # SRC_URI = "git://${HOME}/pli/enigma2;protocol=file"
