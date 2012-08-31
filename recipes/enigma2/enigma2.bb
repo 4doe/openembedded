@@ -103,7 +103,7 @@ SRC_URI_append_tmtwin = " \
 						file://keymap.xml \
 						file://rcold.png \
 						file://rc.png \
-						file://rcpositions.xml
+						file://rcpositions.xml \
 						 "
 
 S = "${WORKDIR}/git"
@@ -197,7 +197,7 @@ do_install_append() {
 # NOTE : tmtwin model default picture, key and rcposition
 # 20120830
 
-do_install_append_tmtwin{
+do_install_append_tmtwin(){
 	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0644 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0644 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/

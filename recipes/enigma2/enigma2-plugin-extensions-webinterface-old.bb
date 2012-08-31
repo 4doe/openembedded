@@ -10,7 +10,7 @@ PV = "experimental-git${SRCPV}"
 PKGV = "experimental-git${GITPKGV}"
 PR = "r10"
 
-SRC_URI="git://openpli.git.sourceforge.net/gitroot/openpli/plugins-enigma2;protocol=git;branch=old \
+SRC_URI="https://github.com/4doe/e2plugins.git;protocol=git;branch=old \
 	 file://buildonlywebif.patch \
 	 file://webiftpm.patch\
 "

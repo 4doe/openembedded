@@ -1,7 +1,7 @@
 
 #take care when you do changes on MACHINE_ESSENTIAL_EXTRA_RDEPENDS/RRECOMMENDS you have to increment the recipes/tasks/task-boot.bb PR
 # NOTE : tmtwin include kernel , driver , bootloader
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "kernel technomate-dvb-modules technomate-logo technomate-bootloader"
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "kernel technomate-dvb-modules"
 
 DVBPROVIDER = "kernel"
 
@@ -83,8 +83,6 @@ IMAGE_CMD_ubi_append = "; \
 		mkdir -p ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe; \
 		cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_rootfs.bin; \
 		cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_kernel.bin; \
-		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.cfe.bin ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/cfe.bin; \
-		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.splash.bmp ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/splash.bmp; \
 		cd ${DEPLOY_DIR_IMAGE}; \
 		zip ${IMAGE_NAME}_usb.zip ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/*; \
 		rm -rf update; \
@@ -115,3 +113,6 @@ require conf/machine/include/tune-mips32.inc
 include conf/machine/include/autoload-usbserial.inc
 
 SYSVINIT_ENABLED_GETTYS = ""
+#		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.cfe.bin ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/cfe.bin; \
+#		cp ${DEPLOY_DIR_IMAGE}/${MACHINE}.splash.bmp ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/splash.bmp; \
+
