@@ -148,9 +148,16 @@ def get_imagecmds(d):
         cmds += bb.data.expand(cmd, localdata)
     return cmds
 
+#@ NOTE : define kernel module
+#@ 20120831
+#@ if recompile kernel and pr version , then modify KV and PR.
+
 IMAGE_POSTPROCESS_COMMAND ?= ""
 MACHINE_POSTPROCESS_COMMAND ?= ""
 ROOTFS_POSTPROCESS_COMMAND ?= ""
+KV = "3.1.1"
+PR = "r4.8"
+MODULES_IMAGE_BASE_NAME ?= modules-${KV}-${PR}-${MACHINE}
 
 do_rootfs[nostamp] = "1"
 do_rootfs[dirs] = "${TOPDIR}"
@@ -164,6 +171,10 @@ fakeroot do_rootfs () {
 	mkdir -p ${IMAGE_ROOTFS}
 	mkdir -p ${DEPLOY_DIR_IMAGE}
 
+	if [ "${MACHINE}" == "tmtwin" ];then
+			echo "insert"
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	fi
 	mkdir -p ${IMAGE_ROOTFS}/etc
 
 	if [ "${USE_DEVFS}" != "1" ]; then
