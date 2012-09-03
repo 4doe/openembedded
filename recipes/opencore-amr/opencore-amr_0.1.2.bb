@@ -3,7 +3,8 @@ SECTION = "libs"
 LICENSE="Apache License, Version 2.0"
 PR = "r0"
 
-SRC_URI = "${SOURCEFORGE_MIRROR}/${PN}/${PN}-${PV}.tar.gz"
+#SRC_URI = "${SOURCEFORGE_MIRROR}/${PN}/${PN}-${PV}.tar.gz"
+SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/${PN}-${PV}.tar.gz"
 S = "${WORKDIR}/${PN}-${PV}"
 
 inherit autotools
