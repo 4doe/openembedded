@@ -28,7 +28,6 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-pli-softcamsetup \
 				enigma2-plugin-extensions-1channel \
 				enigma2-plugin-extensions-mytube \
-				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-webinterface \
 				enigma2-plugin-extensions-audiosync \
 				enigma2-plugin-extensions-ppanel \
