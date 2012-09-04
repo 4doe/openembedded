@@ -84,7 +84,7 @@ IMAGE_CMD_ubi_append = "; \
 		cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_rootfs.bin; \
 		cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_kernel.bin; \
 		cd ${DEPLOY_DIR_IMAGE}; \
-		zip ${IMAGE_NAME}_usb.zip ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/*; \
+		zip ${IMAGE_NAME}_usb.zip update/${MACHINE}/cfe/*; \
 		rm -rf update; \
 "
 
