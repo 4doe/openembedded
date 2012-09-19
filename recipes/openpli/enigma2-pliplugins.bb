@@ -10,8 +10,8 @@ RDEPENDS_enigma2-plugin-pli-snmpagent = "enigma2-plugin-extensions-bitrate twist
 DESCRIPTION_enigma2-plugin-extensions-ushare = "UPnP media server"
 RDEPENDS_enigma2-plugin-extensions-ushare = "ushare"
 
-DESCRIPTION_enigma2-plugin-extensions-ushare = "show internet mytube"
-RDEPENDS_enigma2-plugin-extensions-ushare = "mytube"
+DESCRIPTION_enigma2-plugin-extensions-mytube = "show internet mytube"
+RDEPENDS_enigma2-plugin-extensions-mytube = "mytube"
 
 inherit gitpkgv
 
