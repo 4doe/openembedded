@@ -11,6 +11,7 @@ SRCDATE = "20120918"
 RDEPENDS = "kernel (${KV})" 
 RDEPENDS += "technomate-bootloader"
 RDEPENDS += "technomate-logo"
+RDEPENDS += "cccam-config"
 
 MACHINE_KERNEL_PR_append = ".${SRCDATE}.0"
 

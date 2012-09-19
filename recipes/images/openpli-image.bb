@@ -49,6 +49,7 @@ OPTIONAL_PACKAGES += " \
 			parted \
 			dosfstools \
 			python-gdata \
+			cccam-config \
 			"
 
 export IMAGE_BASENAME = "openpli"
