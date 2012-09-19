@@ -4,6 +4,7 @@ SECTION = "tmtwin bootlogo"
 SRC_URI = "file://splash.bmp"
 
 do_compile(){
+	mkdir -p ${DEPLOY_DIR_IMAGE}
 	cp ${WORKDIR}/splash.bmp .
 }
 

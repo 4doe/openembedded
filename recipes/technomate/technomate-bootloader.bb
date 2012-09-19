@@ -7,6 +7,7 @@ SECTION = "tmtwin bootloaders"
 SRC_URI = "file://cfe.bin"
 
 do_compile(){
+	mkdir -p ${DEPLOY_DIR_IMAGE}
 	cp ${WORKDIR}/cfe.bin .
 }
 
