@@ -21,7 +21,6 @@ IMAGE_INSTALL = " \
 				nfs-utils-client \
 				kernel-params \
 				sdparm \
-				cccam-config \
 				"
 
 OPTIONAL_PACKAGES ?= ""
