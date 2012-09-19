@@ -21,8 +21,8 @@ CONFFILES = "/etc/CCcam.cfg /etc/ppanels/CCcam.xml"
 do_install() {
 	install -d ${D}/usr/bin
 	install -m 0755 ${S}/CCcam.${TARGET_ARCH} ${D}/usr/bin/${CAMNAME}
-	install -d ${D}/etc
-	install -m 0644 ${S}/CCcam.cfg ${D}/etc/CCcam.cfg
+#	install -d ${D}/etc
+#	install -m 0644 ${S}/CCcam.cfg ${D}/etc/CCcam.cfg
 	install -d ${D}/etc/ppanels
 	install -m 0644 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/CCcam.xml
 }
