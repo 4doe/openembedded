@@ -1,0 +1,141 @@
+diff --git a/recipes/linux-libc-headers/linux-libc-headers-2.6.30/asm-page.patch b/recipes/linux-libc-headers/linux-libc-headers-2.6.30/asm-page.patch
+deleted file mode 100644
+index 268b3eb..0000000
+--- a/recipes/linux-libc-headers/linux-libc-headers-2.6.30/asm-page.patch
++++ /dev/null
+@@ -1,55 +0,0 @@
+-This patch makes asm/page.h available with PAGE_SIZE available to
+-the user space again, as it was in old header sets.
+-It's better to not use it and fix recipes instead:
+-- Use getpagesize(), -D_BSD_SOURCE or -D_XOPEN_SOURCE=500 and
+-  #include <unistd.h>
+-- in glibc >= 2.10 you can use PAGE_SIZE and #include <sys/user.h>.
+-
+-Index: linux-2.6.30/arch/arm/include/asm/page.h
+-===================================================================
+---- linux-2.6.30.orig/arch/arm/include/asm/page.h
+-+++ linux-2.6.30/arch/arm/include/asm/page.h
+-@@ -15,11 +15,12 @@
+- #define PAGE_SIZE		(1UL << PAGE_SHIFT)
+- #define PAGE_MASK		(~(PAGE_SIZE-1))
+- 
+-+#ifdef __KERNEL__
+- #ifndef __ASSEMBLY__
+- 
+- #ifndef CONFIG_MMU
+- 
+--#include "page-nommu.h"
+-+#include <asm/page-nommu.h>
+- 
+- #else
+- 
+-@@ -204,4 +205,5 @@ typedef struct page *pgtable_t;
+- 
+- #include <asm-generic/page.h>
+- 
+-+#endif /* __KERNEL__ */
+- #endif
+-Index: linux-2.6.30/include/asm-generic/Kbuild.asm
+-===================================================================
+---- linux-2.6.30.orig/include/asm-generic/Kbuild.asm
+-+++ linux-2.6.30/include/asm-generic/Kbuild.asm
+-@@ -16,6 +16,7 @@ unifdef-y += ioctls.h
+- unifdef-y += ipcbuf.h
+- unifdef-y += mman.h
+- unifdef-y += msgbuf.h
+-+unifdef-y += page.h
+- unifdef-y += param.h
+- unifdef-y += poll.h
+- unifdef-y += posix_types.h
+-Index: linux-2.6.30/include/asm-generic/Kbuild
+-===================================================================
+---- linux-2.6.30.orig/include/asm-generic/Kbuild
+-+++ linux-2.6.30/include/asm-generic/Kbuild
+-@@ -3,6 +3,7 @@ header-y += errno.h
+- header-y += fcntl.h
+- header-y += ioctl.h
+- header-y += mman.h
+-+header-y += page.h
+- header-y += poll.h
+- header-y += signal.h
+- header-y += statfs.h
+diff --git a/recipes/linux-libc-headers/linux-libc-headers-2.6.30/uio-header.patch b/recipes/linux-libc-headers/linux-libc-headers-2.6.30/uio-header.patch
+deleted file mode 100644
+index 50ca855..0000000
+--- a/recipes/linux-libc-headers/linux-libc-headers-2.6.30/uio-header.patch
++++ /dev/null
+@@ -1,41 +0,0 @@
+-diff --git a/include/linux/uio.h b/include/linux/uio.h
+-index b7fe138..98c1143 100644
+---- a/include/linux/uio.h
+-+++ b/include/linux/uio.h
+-@@ -19,15 +19,6 @@ struct iovec
+- 	__kernel_size_t iov_len; /* Must be size_t (1003.1g) */
+- };
+- 
+--#ifdef __KERNEL__
+--
+--struct kvec {
+--	void *iov_base; /* and that should *never* hold a userland pointer */
+--	size_t iov_len;
+--};
+--
+--#endif
+--
+- /*
+-  *	UIO_MAXIOV shall be at least 16 1003.1g (5.4.1.1)
+-  */
+-@@ -35,6 +26,13 @@ struct kvec {
+- #define UIO_FASTIOV	8
+- #define UIO_MAXIOV	1024
+- 
+-+#ifdef __KERNEL__
+-+
+-+struct kvec {
+-+	void *iov_base; /* and that should *never* hold a userland pointer */
+-+	size_t iov_len;
+-+};
+-+
+- /*
+-  * Total number of bytes covered by an iovec.
+-  *
+-@@ -53,5 +51,6 @@ static inline size_t iov_length(const struct iovec *iov, unsigned long nr_segs)
+- }
+- 
+- unsigned long iov_shorten(struct iovec *iov, unsigned long nr_segs, size_t to);
+-+#endif
+- 
+- #endif
+diff --git a/recipes/linux-libc-headers/linux-libc-headers_2.6.30.bb b/recipes/linux-libc-headers/linux-libc-headers_2.6.30.bb
+deleted file mode 100644
+index c64e59c..0000000
+--- a/recipes/linux-libc-headers/linux-libc-headers_2.6.30.bb
++++ /dev/null
+@@ -1,27 +0,0 @@
+-require linux-libc-headers.inc
+-
+-INHIBIT_DEFAULT_DEPS = "1"
+-DEPENDS += "unifdef-native"
+-PR = "r2"
+-
+-SRC_URI = "${KERNELORG_MIRROR}/pub/linux/kernel/v2.6/linux-${PV}.tar.bz2 \
+-	   file://uio-header.patch \
+-	  "
+-# Not applied, see note in the patch:
+-#	   file://asm-page.patch \
+-
+-S = "${WORKDIR}/linux-${PV}"
+-
+-do_configure() {
+-	oe_runmake allnoconfig ARCH=$ARCH
+-}
+-
+-do_compile () {
+-}
+-
+-do_install() {
+-	oe_runmake headers_install INSTALL_HDR_PATH=${D}${exec_prefix} ARCH=$ARCH
+-}
+-
+-SRC_URI[md5sum] = "7a80058a6382e5108cdb5554d1609615"
+-SRC_URI[sha256sum] = "d7b9f19b92fd5c693c16cd62f441d051b699f28ec6a175d1b464e58bacd8c78f"

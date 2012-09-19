@@ -7,7 +7,7 @@ do_compile() {
     mkdir -p ${S}/${sysconfdir}/opkg
 	if [ "${MACHINE}" == "tmtwin" ];then
 	    for feed in ${FEEDS}; do
-    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_tm}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_tm_openpli}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
     	done
 	else
 	    for feed in ${FEEDS}; do
