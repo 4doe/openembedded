@@ -48,6 +48,7 @@ OPTIONAL_PACKAGES += " \
 			mpd \
 			parted \
 			dosfstools \
+			python-gdata \
 			"
 
 export IMAGE_BASENAME = "openpli"
