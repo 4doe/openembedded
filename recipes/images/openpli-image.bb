@@ -21,6 +21,7 @@ IMAGE_INSTALL = " \
 				nfs-utils-client \
 				kernel-params \
 				sdparm \
+				cccam-config \
 				"
 
 OPTIONAL_PACKAGES ?= ""
@@ -49,7 +50,6 @@ OPTIONAL_PACKAGES += " \
 			parted \
 			dosfstools \
 			python-gdata \
-			cccam-config \
 			"
 
 export IMAGE_BASENAME = "openpli"
