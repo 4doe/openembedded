@@ -10,13 +10,17 @@ RDEPENDS_enigma2-plugin-pli-snmpagent = "enigma2-plugin-extensions-bitrate twist
 DESCRIPTION_enigma2-plugin-extensions-ushare = "UPnP media server"
 RDEPENDS_enigma2-plugin-extensions-ushare = "ushare"
 
+DESCRIPTION_enigma2-plugin-extensions-ushare = "show internet mytube"
+RDEPENDS_enigma2-plugin-extensions-ushare = "mytube"
+
 inherit gitpkgv
 
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 PR = "r3"
 
-SRC_URI = "git://openpli.git.sourceforge.net/gitroot/openpli/enigma2-plugins;protocol=git \
+#SRC_URI = "git://openpli.git.sourceforge.net/gitroot/openpli/enigma2-plugins;protocol=git \
+SRC_URI = "git://github.com/4doe/enigma2-plugins.git;protocol=git \
 		   file://pythonpaths.patch"
 
 S = "${WORKDIR}/git"
