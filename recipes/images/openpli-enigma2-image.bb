@@ -98,6 +98,8 @@ IMAGE_INSTALL += " \
 				settings-autorestore \
 				${@base_contains("MACHINE_FEATURES", "wifi", "${WIFI_DRIVERS}", "", d)} \
 				enigma2-plugin-softcams-cccam-config \
+				enigma2-plugins-softcams-cccam209 \
+				enigma2-plugins-softcams-cccam221 \
 				"
 
 OPTIONAL_PACKAGES += " \
