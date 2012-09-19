@@ -31,7 +31,6 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-audiosync \
 				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-ppanel \
-				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-systemplugins-softwaremanager \
 				enigma2-plugin-systemplugins-positionersetup \
 				enigma2-plugin-extensions-cutlisteditor \
@@ -62,6 +61,7 @@ ENIGMA2_OPTIONAL = " \
 				enigma2-pliplugins \
 				task-openplugins \
 				enigma2-plugin-extensions-tuxcom \
+				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-extensions-tuxterm \
 				${@base_contains("MACHINE_FEATURES", "usbhost", "enigma2-plugin-drivers-usbserial" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "dvbapi5", "dvb-usb-drivers-meta" , "", d)} \
