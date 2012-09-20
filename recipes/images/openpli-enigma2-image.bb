@@ -27,6 +27,7 @@ WIFI_DRIVERS = " \
 ENIGMA2_PLUGINS = " \
 				enigma2-plugin-pli-softcamsetup \
 				enigma2-plugin-extensions-mytube \
+				enigma2-plugin-extensions-nstreamvod \
 				enigma2-plugin-extensions-1channel \
 				enigma2-plugin-extensions-webinterface \
 				enigma2-plugin-extensions-audiosync \
@@ -63,6 +64,7 @@ ENIGMA2_OPTIONAL = " \
 				task-openplugins \
 				enigma2-plugin-extensions-tuxcom \
 				enigma2-plugin-extensions-mytube \
+				enigma2-plugin-extensions-nstreamvod \
 				enigma2-plugin-extensions-tuxterm \
 				${@base_contains("MACHINE_FEATURES", "usbhost", "enigma2-plugin-drivers-usbserial" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "dvbapi5", "dvb-usb-drivers-meta" , "", d)} \
@@ -101,6 +103,7 @@ IMAGE_INSTALL += " \
 				enigma2-plugin-softcams-cccam-config \
 				enigma2-plugin-softcams-newcs \
 				enigma2-plugin-softcams-mgcamd \
+				enigma2-plugin-softcams-mgcamd-config \
 				enigma2-plugin-softcams-newcs-config \
 				"
 
