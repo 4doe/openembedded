@@ -215,7 +215,6 @@ do_install_append() {
 do_install_append_tmtwin(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
-	install -d 0755 ${D}/usr/share/enigma2/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
@@ -233,11 +232,11 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
 	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
-	install -d 0755 ${WORKDIR}/input_rcnew.png$ {D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 }
