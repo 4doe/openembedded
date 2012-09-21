@@ -118,6 +118,7 @@ SRC_URI_append_tmtwin = " \
 						file://input_rcnew-configured.png \
 						file://input_rcold.png \
 						file://input_rcold-configured.png \
+						file://menu.xml \
 "
 
 S = "${WORKDIR}/git"
@@ -236,6 +237,7 @@ do_install_append_tmtwin(){
 	install -d 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 }
