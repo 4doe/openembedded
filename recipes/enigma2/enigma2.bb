@@ -105,7 +105,14 @@ SRC_URI_append_tmtwin = " \
 						file://rcold.png \
 						file://rc.png \
 						file://rcpositions.xml \
-						 "
+						file://enigma2_end.sh \
+						file://enigma2_pre_start.sh \
+						file://enigma2.sh \
+						file://keycheck_pr \
+						file://restore.sh \
+						file://update_pr \
+						file://var \
+"
 
 S = "${WORKDIR}/git"
 
@@ -199,14 +206,24 @@ do_install_append() {
 # 20120830
 
 do_install_append_tmtwin(){
-	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0644 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
-	install -m 0644 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -d 0755 ${D}/usr/bin/
+	install -d 0755 ${D}/etc/
+	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
+	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	cp ${WORKDIR}/var ${D}/etc/var.tar
 }
 
 python populate_packages_prepend () {

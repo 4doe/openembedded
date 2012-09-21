@@ -30,7 +30,6 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-nstreamvod \
 				enigma2-plugin-extensions-1channel \
 				enigma2-plugin-extensions-webinterface \
-				enigma2-plugin-extensions-audiosync \
 				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-ppanel \
 				enigma2-plugin-systemplugins-softwaremanager \
@@ -102,9 +101,8 @@ IMAGE_INSTALL += " \
 				enigma2-plugin-softcams-cccam221 \
 				enigma2-plugin-softcams-cccam-config \
 				enigma2-plugin-softcams-newcs \
-				enigma2-plugin-softcams-mgcamd \
-				enigma2-plugin-softcams-mgcamd-config \
 				enigma2-plugin-softcams-newcs-config \
+				enigma2-plugin-softcams-mgcamd \
 				"
 
 OPTIONAL_PACKAGES += " \
