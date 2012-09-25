@@ -131,7 +131,6 @@ SRC_URI_append_tmtwin = " \
 						file://control_post \
 						file://update \
 						file://welcome \
-						file://mdev.conf \
 "
 
 SRC_URI_append_ios100 = " \
@@ -167,7 +166,6 @@ SRC_URI_append_ios100 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
-						file://mdev.conf \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -202,7 +200,6 @@ SRC_URI_append_ios200 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
-						file://mdev.conf \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -237,7 +234,6 @@ SRC_URI_append_ios300 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
-						file://mdev.conf \
 "
 
 
@@ -367,7 +363,6 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/mdev.conf ${D}/etc/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -407,7 +402,6 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/mdev.conf ${D}/etc/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -448,7 +442,6 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/mdev.conf ${D}/etc/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -488,7 +481,6 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/mdev.conf ${D}/etc/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
