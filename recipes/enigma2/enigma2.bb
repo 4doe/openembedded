@@ -366,7 +366,7 @@ do_install_append_tmtwin(){
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.gz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.bz
 }
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
@@ -405,7 +405,7 @@ do_install_append_ios100(){
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.gz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.bz
 }
 
 do_install_append_ios200(){
@@ -445,7 +445,7 @@ do_install_append_ios200(){
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.gz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.bz
 }
 do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
@@ -484,7 +484,7 @@ do_install_append_ios300(){
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.gz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.bz
 }
 
 python populate_packages_prepend () {

@@ -12,6 +12,24 @@ PACKAGES = "${PN}"
 
 SRC_URI = "git://github.com/littlesat/skin-PLiHD.git;protocol=git"
 
+SRC_URI_append_tmtwin = " \
+						 file://skin.xml \
+						 "
+SRC_URI_append_ios100 = " \
+						 file://skin.xml \
+						 "
+SRC_URI_append_ios200 = " \
+						 file://skin.xml \
+						 "
+SRC_URI_append_ios300 = " \
+						 file://skin.xml \
+						 "
+SRC_URI_append_tm2toe = " \
+						 file://skin.xml \
+						 "
+
+
+
 FILES_${PN} = "/usr/share/enigma2/"
 
 # NOTE : dependency error
@@ -22,8 +40,42 @@ S = "${WORKDIR}/git"
 do_compile() {
 }
 
-do_install() {
+do_install_append_tmtwin() {
 	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
 	cp -rp ${S}/usr/share/* ${D}/usr/share/
 	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
+}
+
+do_install_append_ios100() {
+	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
+	cp -rp ${S}/usr/share/* ${D}/usr/share/
+	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
+}
+
+do_install_append_ios200() {
+	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
+	cp -rp ${S}/usr/share/* ${D}/usr/share/
+	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
+}
+
+do_install_append_ios300() {
+	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
+	cp -rp ${S}/usr/share/* ${D}/usr/share/
+	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
+}
+
+do_install_append_tm2toe() {
+	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
+	cp -rp ${S}/usr/share/* ${D}/usr/share/
+	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
 }
