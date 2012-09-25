@@ -174,6 +174,18 @@ fakeroot do_rootfs () {
 	if [ "${MACHINE}" == "tmtwin" ];then
 			echo "insert"
 			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	elif [ "${MACHINE}" == "ios100" ];then
+			echo "insert ios100"
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	elif [ "${MACHINE}" == "ios200" ];then
+			echo "insert ios200"
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	elif [ "${MACHINE}" == "ios300" ];then
+			echo "insert ios300"
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	elif [ "${MACHINE}" == "tm2toe" ];then
+			echo "insert tm2toe "
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
 	fi
 	mkdir -p ${IMAGE_ROOTFS}/etc
 
