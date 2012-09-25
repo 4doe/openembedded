@@ -23,6 +23,31 @@ SRC_URI_append_tmtwin = " \
 			file://favicon.ico \
 			file://rc.png \
 			file://dreamboxwebtv.png"
+SRC_URI_append_ios100 = " \
+			file://enigma2_plugins_WebInterface.patch \
+			file://dreamboxweb.png \
+			file://favicon.ico \
+			file://rc.png \
+			file://dreamboxwebtv.png"
+
+SRC_URI_append_ios200 = " \
+			file://enigma2_plugins_WebInterface.patch \
+			file://dreamboxweb.png \
+			file://favicon.ico \
+			file://rc.png \
+			file://dreamboxwebtv.png"
+SRC_URI_append_ios300 = " \
+			file://enigma2_plugins_WebInterface.patch \
+			file://dreamboxweb.png \
+			file://favicon.ico \
+			file://rc.png \
+			file://dreamboxwebtv.png"
+SRC_URI_append_tm2toe = " \
+			file://enigma2_plugins_WebInterface.patch \
+			file://dreamboxweb.png \
+			file://favicon.ico \
+			file://rc.png \
+			file://dreamboxwebtv.png"
 
 S = "${WORKDIR}/git"
 
@@ -72,6 +97,34 @@ do_unpack_append(){
 }
 
 do_install_append_tmtwin() {
+	install -m 0644 ${WORKDIR}/dreamboxweb.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/dreamboxwebtv.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/tpl/default/streaminterface/img
+	install -m 0644 ${WORKDIR}/favicon.ico ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+}
+
+do_install_append_ios100() {
+	install -m 0644 ${WORKDIR}/dreamboxweb.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/dreamboxwebtv.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/tpl/default/streaminterface/img
+	install -m 0644 ${WORKDIR}/favicon.ico ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+}
+
+do_install_append_ios200() {
+	install -m 0644 ${WORKDIR}/dreamboxweb.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/dreamboxwebtv.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/tpl/default/streaminterface/img
+	install -m 0644 ${WORKDIR}/favicon.ico ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+}
+
+do_install_append_ios300() {
+	install -m 0644 ${WORKDIR}/dreamboxweb.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/dreamboxwebtv.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/tpl/default/streaminterface/img
+	install -m 0644 ${WORKDIR}/favicon.ico ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+	install -m 0644 ${WORKDIR}/rc.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
+}
+
+do_install_append_tm2toe() {
 	install -m 0644 ${WORKDIR}/dreamboxweb.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
 	install -m 0644 ${WORKDIR}/dreamboxwebtv.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/tpl/default/streaminterface/img
 	install -m 0644 ${WORKDIR}/favicon.ico ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface/web-data/img/
