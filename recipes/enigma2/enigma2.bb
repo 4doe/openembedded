@@ -121,6 +121,81 @@ SRC_URI_append_tmtwin = " \
 						file://menu.xml \
 "
 
+SRC_URI_append_ios100 = " \
+ 						file://arrowdown.png \
+						file://arrowleft.png \
+						file://arrowright.png \
+						file://arrowup.png \
+						file://keymap.xml \
+						file://rcold.png \
+						file://rc.png \
+						file://rcpositions.xml \
+						file://enigma2_end.sh \
+						file://enigma2_pre_start.sh \
+						file://enigma2.sh \
+						file://keycheck_pr \
+						file://restore.sh \
+						file://update_pr \
+						file://var \
+						file://skin.xml \
+						file://startwizard.xml \
+						file://input_rcnew.png \
+						file://input_rcnew-configured.png \
+						file://input_rcold.png \
+						file://input_rcold-configured.png \
+						file://menu.xml \
+"
+SRC_URI_append_ios200 = " \
+ 						file://arrowdown.png \
+						file://arrowleft.png \
+						file://arrowright.png \
+						file://arrowup.png \
+						file://keymap.xml \
+						file://rcold.png \
+						file://rc.png \
+						file://rcpositions.xml \
+						file://enigma2_end.sh \
+						file://enigma2_pre_start.sh \
+						file://enigma2.sh \
+						file://keycheck_pr \
+						file://restore.sh \
+						file://update_pr \
+						file://var \
+						file://skin.xml \
+						file://startwizard.xml \
+						file://input_rcnew.png \
+						file://input_rcnew-configured.png \
+						file://input_rcold.png \
+						file://input_rcold-configured.png \
+						file://menu.xml \
+"
+SRC_URI_append_ios300 = " \
+ 						file://arrowdown.png \
+						file://arrowleft.png \
+						file://arrowright.png \
+						file://arrowup.png \
+						file://keymap.xml \
+						file://rcold.png \
+						file://rc.png \
+						file://rcpositions.xml \
+						file://enigma2_end.sh \
+						file://enigma2_pre_start.sh \
+						file://enigma2.sh \
+						file://keycheck_pr \
+						file://restore.sh \
+						file://update_pr \
+						file://var \
+						file://skin.xml \
+						file://startwizard.xml \
+						file://input_rcnew.png \
+						file://input_rcnew-configured.png \
+						file://input_rcold.png \
+						file://input_rcold-configured.png \
+						file://menu.xml \
+"
+
+
+
 S = "${WORKDIR}/git"
 
 FILES_${PN} += "${datadir}/keymaps"
@@ -213,6 +288,91 @@ do_install_append() {
 # 20120830
 
 do_install_append_tmtwin(){
+	install -d 0755 ${D}/usr/bin/
+	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	cp ${WORKDIR}/var ${D}/etc/var.tar
+}
+do_install_append_ios100(){
+	install -d 0755 ${D}/usr/bin/
+	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	cp ${WORKDIR}/var ${D}/etc/var.tar
+}
+
+do_install_append_ios200(){
+	install -d 0755 ${D}/usr/bin/
+	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	cp ${WORKDIR}/var ${D}/etc/var.tar
+}
+do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
