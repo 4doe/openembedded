@@ -123,6 +123,14 @@ SRC_URI_append_tmtwin = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
+						file://index.html \
+						file://logo.png \
+						file://miniweb.css \
+						file://backup_login \
+						file://control \
+						file://control_post \
+						file://update \
+						file://welcome \
 "
 
 SRC_URI_append_ios100 = " \
@@ -150,6 +158,14 @@ SRC_URI_append_ios100 = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
+						file://index.html \
+						file://logo.png \
+						file://miniweb.css \
+						file://backup_login \
+						file://control \
+						file://control_post \
+						file://update \
+						file://welcome \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -176,6 +192,14 @@ SRC_URI_append_ios200 = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
+						file://index.html \
+						file://logo.png \
+						file://miniweb.css \
+						file://backup_login \
+						file://control \
+						file://control_post \
+						file://update \
+						file://welcome \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -202,6 +226,14 @@ SRC_URI_append_ios300 = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
+						file://index.html \
+						file://logo.png \
+						file://miniweb.css \
+						file://backup_login \
+						file://control \
+						file://control_post \
+						file://update \
+						file://welcome \
 "
 
 
@@ -300,6 +332,7 @@ do_install_append() {
 do_install_append_tmtwin(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
@@ -322,6 +355,14 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/index.html ${D}/home/
+	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
+	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
+	install -m 0755 ${WORKDIR}/backup_login ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control_post ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/update ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/welcome ${D}/home/cgi-bin/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -330,6 +371,7 @@ do_install_append_tmtwin(){
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
@@ -352,6 +394,14 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/index.html ${D}/home/
+	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
+	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
+	install -m 0755 ${WORKDIR}/backup_login ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control_post ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/update ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/welcome ${D}/home/cgi-bin/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -361,6 +411,7 @@ do_install_append_ios100(){
 do_install_append_ios200(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
@@ -383,6 +434,14 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/index.html ${D}/home/
+	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
+	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
+	install -m 0755 ${WORKDIR}/backup_login ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control_post ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/update ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/welcome ${D}/home/cgi-bin/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -391,6 +450,7 @@ do_install_append_ios200(){
 do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
@@ -413,6 +473,14 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/index.html ${D}/home/
+	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
+	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
+	install -m 0755 ${WORKDIR}/backup_login ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/control_post ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/update ${D}/home/cgi-bin/
+	install -m 0755 ${WORKDIR}/welcome ${D}/home/cgi-bin/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz

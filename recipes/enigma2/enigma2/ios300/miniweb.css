@@ -1,0 +1,30 @@
+A:visited {
+	background-color: #FFFFFF;
+	border: 1px solid;
+	color: #000000;
+	font: bold 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+A:link {	
+	background-color: #FFFFFF;
+	border: 1px solid;
+	color: #000000;
+	font: bold 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+A:hover {
+	background-color: #FFFFFF;
+	border: 1px solid;
+	color: #000000;
+	font: bold 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+A:active {
+	background-color: #FFFFFF;
+	border: 1px solid;
+	color: #000000;
+	font: bold 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+.textbutton{
+        background-color: ivory;
+        border:0px solid #FFCC00;
+        font: 15pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+        color:green;
+        }

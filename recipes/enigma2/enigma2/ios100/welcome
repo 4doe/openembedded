@@ -1,0 +1,139 @@
+#!/bin/sh
+
+. /etc/profile >/dev/null 2>&1
+
+rm -f /tmp/.login
+
+MODE="iQ"
+HWTYPE=$hwtype
+
+IP=`ifconfig  | grep 'inet addr:' | awk '{print $2}' | sed 's/addr://g' | head -n 1`
+
+if [ -e /tmp/extip ]; then
+		Check_IP=`cat /tmp/extip | wc -c`
+		if [ $Check_IP -eq 0 ]; then
+			wget -O /tmp/extip -T 2 -t 2 http://en2.ath.cx/iprequest.php
+		fi
+else
+	wget -O /tmp/extip -T 2 -t 2 http://en2.ath.cx/iprequest.php
+fi
+
+cat <<EOF
+
+<html><head><title>Mini Web</title>
+<LINK HREF=../miniweb.css REL=Stylesheet TYPE=text/css></head>
+<META HTTP-EQUIV=Content-Type CONTENT="text/html; charset=">
+<body bgcolor=#363636 link=orange alink=white vlink=orange>
+
+<font face=tahoma size=5 color=white><b>WELCOME to your <font color=red>&nbsp;MINI WEB $MODE</font></b></font><br><br>
+
+<table cellpadding=0 cellspacing=0 border=0>
+<tr valign=top>
+<td><img src=../logo.png></td>
+<td>
+<table cellpadding=0 cellspacing=0 border=0>
+<tr><td>
+
+</td> </tr></table>
+</td>
+
+<td width=20></td>
+
+<td valign=center>
+<table cellpadding=0 cellspacing=0 border=0>
+<tr>
+        <td><font size=3 face=arial color=orange>Model</font></td>
+        <td width=20></td>
+        <td><font color=yellow><b>$HWTYPE</b></font></td>
+</tr>
+<tr>
+        <td><font size=3 face=arial color=orange>Kernel Release</font></td>
+        <td width=20></td>
+        <td><font color=white> `uname -r` </font></td>
+</tr>
+<tr>
+        <td><font size=3 face=arial color=orange>Static ip</font></td>
+        <td width=20></td>
+        <td><font color=white><font color=yellow><b>`cat /tmp/extip`</b></font></font></td>
+</tr>
+<tr>
+        <td><font size=3 face=arial color=orange>Network Node</font></td>
+        <td width=20></td>
+        <td><font color=white> $IP </font></td>
+</tr>
+<tr>
+        <td><font size=3 face=arial color=orange>Uptime</font></td>
+        <td width=20></td>
+        <td><font color=white> `uptime` </font></td>
+</tr>
+</table>
+</td>
+</td><tr></table>
+
+<hr>
+<p>
+<p>
+<font face=tahoma size=4 color=#ffff00><b>- Services and Bouquet</b></font>
+<table border=0 cellpadding=0 cellspacing=0 height=45 bgcolor=#242424>
+<form enctype="multipart/form-data" action="/cgi-bin/control_post" method=post>
+<tr>
+<td width=10></td>
+<td><font size=2 face=arial color=orange>Backup : <a href="/cgi-bin/control?mode=backup_service"> Click </a></font></td>
+
+<td>&nbsp;<font face=arial color=white size="2">&lt ------------------------------ &gt</font>&nbsp;</td>
+
+<td width=10></td>
+<td colspan=2><font size=2 face=arial color=orange>Restore (Select FILE *.tar.gz)&nbsp;<input type=file name=restore_service> <input type="submit" value="Download..."></font></td>
+<td width=10></td>
+</tr>
+</table>
+</form>
+
+<font face=tahoma size=4 color=#ffff00><b>- Edit Emul config</b></font>
+<table border=0 cellpadding=0 cellspacing=0 height=50 bgcolor=#242424>
+<tr height=10><td colspan=11></td></tr>
+<tr>
+<td width=10></td>
+<td><font size=2 face=arial color=orange>CCcam Edit :&nbsp;</font></td><td> <a href="/cgi-bin/control?mode=cccam"> Click </a></td>
+<td>&nbsp;<font face=arial color=white size="2">------------------------------ &gt</font>&nbsp;</td>
+<td><font size=2 face=arial color=white>/var/etc/CCcam.cfg</font></td>
+<td width=100></td>
+
+<td><font size=2 face=arial color=orange>Mgcamd Edit :&nbsp;</font></td><td> <a href="/cgi-bin/control?mode=newcamd"> Click </a></td>
+<td>&nbsp;<font face=arial color=white size="2">------------------------------ &gt</font>&nbsp;</td>
+<td><font size=2 face=arial color=white>/var/keys/newcamd.list</font></td>
+<td width=10></td>
+</tr>
+
+<tr>
+<td width=10></td>
+<td><font size=2 face=arial color=orange>NewCS Edit :&nbsp;</font></td><td> <a href="/cgi-bin/control?mode=newcs"> Click </a></td>
+<td>&nbsp;<font face=arial color=white size="2">------------------------------ &gt</font>&nbsp;</td>
+<td><font size=2 face=arial color=white>/var/tuxbox/config/newcs.xml</font></td>
+<td width=100></td>
+
+<td><font size=2 face=arial color=orange>Camd3 Edit :&nbsp;</font></td><td> <a href="/cgi-bin/control?mode=camd3"> Click </a></td>
+<td>&nbsp;<font face=arial color=white size="2">------------------------------ &gt</font>&nbsp;</td>
+<td><font size=2 face=arial color=white>/var/keys/camd3.config</font></td>
+<td width=10></td>
+</tr>
+
+<tr>
+<td width=10></td>
+<td><font size=2 face=arial color=orange>SoftCAM Edit :&nbsp;</font></td><td> <a href="/cgi-bin/control?mode=softcam"> Click </a></td>
+<td>&nbsp;<font face=arial color=white size="2">------------------------------ &gt</font>&nbsp;</td>
+<td><font size=2 face=arial color=white>/etc/init.d/softcam</font></td>
+<td width=100></td>
+</tr>
+
+<tr height=10><td colspan=11></td></tr>
+</table>
+
+
+</td>
+<td width=3%></td></tr>
+</table>
+</body>
+</html>
+
+EOF
