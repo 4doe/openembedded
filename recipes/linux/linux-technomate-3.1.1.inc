@@ -11,6 +11,7 @@ RDEPENDS_kernel-image = "mtd-minimal-nand-utils"
 
 SRC_URI += "http://opengit.homelinux.com/pub/download/kernel/linux-${KV}_${SRCREV}.tar.gz \
 	file://${MACHINE}_defconfig \
+	file://001_fix_standby_error_${MACHINE}.patch \
 		"
 
 S = "${WORKDIR}/linux-${KV}"
