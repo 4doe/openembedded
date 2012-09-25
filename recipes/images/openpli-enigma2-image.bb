@@ -27,8 +27,6 @@ WIFI_DRIVERS = " \
 ENIGMA2_PLUGINS = " \
 				enigma2-plugin-pli-softcamsetup \
 				enigma2-plugin-extensions-mytube \
-				enigma2-plugin-extensions-1channel \
-				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-webinterface \
 				enigma2-plugin-extensions-ppanel \
 				enigma2-plugin-extensions-openwebif \
@@ -62,8 +60,6 @@ ENIGMA2_OPTIONAL = " \
 				enigma2-pliplugins \
 				task-openplugins \
 				enigma2-plugin-extensions-tuxcom \
-				enigma2-plugin-extensions-1channel \
-				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-extensions-nstreamvod \
 				enigma2-plugin-extensions-tuxterm \
