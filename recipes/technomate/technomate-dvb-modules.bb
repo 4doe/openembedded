@@ -6,7 +6,9 @@ LICENSE = "proprietary"
 KV = "3.1.1"
 PV = "${KV}"
 
-SRCDATE = "20120926"
+SRCDATE_tmtwin = "20120924"
+SRCDATE_ios200 = "20120926"
+SRCDATE_ios300 = "20120926"
 
 RDEPENDS = "kernel (${KV})" 
 RDEPENDS += "technomate-bootloader"
