@@ -41,5 +41,9 @@ do_install() {
     for i in `ls | grep \\.ko | sed -e 's/.ko//g'`; do
         echo $i >> ${D}/${sysconfdir}/modutils/_vuplus
     done
-
+	if [ "${MACHINE}" == tmsingle ];then
+		echo "bcmlinuxdvb _hwtype=\$hwtypenum" > ${D}/${sysconfdir}/modutils/_vuplus
+	elif [ "${MACHINE}" == ios300 ];then
+		echo "bcmlinuxdvb _hwtype=\$hwtypenum" > ${D}/${sysconfdir}/modutils/_vuplus
+	fi
 }
