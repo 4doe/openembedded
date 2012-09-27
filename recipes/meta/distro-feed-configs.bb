@@ -3,13 +3,12 @@ PR = "r1"
 
 DISTRO_FEED_PREFIX ?= "remote"
 DISTRO_FEED_URI ?= "http://my-distribution.example/remote-feed/"
+DISTRO_FEED_URI_Openembedded ?= "http://en2.ath.cx/Openembedded/${feed}"
 
 do_compile() {
     mkdir -p ${S}/${sysconfdir}/opkg
 	if [ "${MACHINE}" == "tmtwin" ];then
-#for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} tmtwin vuduo; do
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-#echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_tm_openpli}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	elif [ "${MACHINE}" == "tm2toe" ];then
