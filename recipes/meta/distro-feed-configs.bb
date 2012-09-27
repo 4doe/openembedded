@@ -9,23 +9,23 @@ do_compile() {
     mkdir -p ${S}/${sysconfdir}/opkg
 	if [ "${MACHINE}" == "tmtwin" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	elif [ "${MACHINE}" == "tm2toe" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	elif [ "${MACHINE}" == "ios100" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	elif [ "${MACHINE}" == "ios200" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	elif [ "${MACHINE}" == "ios300" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
-	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
 	else
 	    for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE_ARCH}; do
