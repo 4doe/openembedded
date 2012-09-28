@@ -13,6 +13,43 @@ PR = "r0.72"
 
 require openplugins.inc
 
+SRC_URI_append_tmtwin = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
+
+SRC_URI_append_tm2toe = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
+SRC_URI_append_ios100 = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
+SRC_URI_append_ios200 = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
+SRC_URI_append_ios300 = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
+
 # Just a quick hack to "compile" it
 do_compile() {
 	cheetah-compile -R --nobackup ${S}/plugin
@@ -20,7 +57,28 @@ do_compile() {
 }
 
 PLUGINPATH = "/usr/lib/enigma2/python/Plugins/Extensions/${MODULE}"
-do_install() {
+#@ NOTE : divide model
+#do_install() {
+#	install -d ${D}${PLUGINPATH}
+#	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+#}
+do_install_append_tmtwin () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+}
+do_install_append_tm2toe () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+}
+do_install_append_ios100 () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+}
+do_install_append_ios200 () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+}
+do_install_append_ios300 () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 }
