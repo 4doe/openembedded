@@ -41,6 +41,7 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-mediascanner \
 				enigma2-plugin-extensions-graphmultiepg \
 				enigma2-plugin-systemplugins-skinselector \
+				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-extensions-pictureplayer \
 				enigma2-plugin-extensions-mediaplayer \
 				enigma2-plugin-systemplugins-networkbrowser \

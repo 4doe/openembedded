@@ -16,6 +16,29 @@ inherit python-dir
 
 require openplugins.inc
 
+SRC_URI_append_tmtwin = " \
+						file:// crossepg_menu.py \
+						file:// plugin.py \
+						 "
+SRC_URI_append_tm2toe = " \
+						file:// crossepg_menu.py \ 
+						file:// plugin.py \
+						 "
+
+SRC_URI_append_ios100 = " \
+						 file://crossepg_menu.py \
+						 file://plugin.py \
+						 "
+
+SRC_URI_append_ios200 = " \
+						 file://crossepg_menu.py \ 
+						 file://plugin.py \
+						 "
+SRC_URI_append_ios300 = " \
+						file://crossepg_menu.py \ 
+						file://plugin.py \
+						 "
+#@ NOTE : usr/lib/enigma2/python/Plugins/SystemPlugins/CrossEPG
 FILES_${PN} = "/usr/*"
 FILES_${PN}-dbg += "/usr/crossepg/scripts/mhw2epgdownloader/.debug"
 
@@ -26,6 +49,23 @@ do_compile() {
 	oe_runmake SWIG="swig"
 }
 
-do_install() {
+#@ NOTE : divide model.
+#do_install() {
+#	oe_runmake 'D=${D}' install
+#}
+
+do_install_append_tmtwin() {
+	oe_runmake 'D=${D}' install
+}
+do_install_append_tm2toe() {
+	oe_runmake 'D=${D}' install
+}
+do_install_append_ios100() {
+	oe_runmake 'D=${D}' install
+}
+do_install_append_ios200() {
+	oe_runmake 'D=${D}' install
+}
+do_install_append_ios300() {
 	oe_runmake 'D=${D}' install
 }
