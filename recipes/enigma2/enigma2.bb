@@ -373,7 +373,7 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins  
+	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/ 
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
@@ -416,7 +416,7 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins  
+	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/ 
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
@@ -460,7 +460,7 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins  
+	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
@@ -503,7 +503,7 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins  
+	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
