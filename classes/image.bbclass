@@ -277,6 +277,13 @@ rootfs_update_timestamp () {
 	date "+%m%d%H%M%Y" >${IMAGE_ROOTFS}/etc/timestamp
 }
 
+#@ Can be mount Hdd and usb.
+rootfs_mount_devices () {
+	echo "/media/hdd/ 192.168.0.0/255.255.0.0(rw,no_root_squash,sync,no_subtree_check)" > ${IMAGE_ROOTFS}/etc/exports
+	echo "/media/hdd2/ 192.168.0.0/255.255.0.0(rw,no_root_squash,sync,no_subtree_check)" >> ${IMAGE_ROOTFS}/etc/exports
+	echo "/media/usb/ 192.168.0.0/255.255.0.0(rw,no_root_squash,sync,no_subtree_check)" >> ${IMAGE_ROOTFS}/etc/exports
+}
+
 # Install locales into image for every entry in IMAGE_LINGUAS
 install_linguas() {
 if [ -e ${IMAGE_ROOTFS}/usr/bin/opkg-cl ] ; then
@@ -322,7 +329,7 @@ fi
 }
 
 # export the zap_root_password, create_etc_timestamp and remote_init_link
-EXPORT_FUNCTIONS zap_root_password create_etc_timestamp remove_init_link do_rootfs make_zimage_symlink_relative set_image_autologin rootfs_update_timestamp install_linguas
+EXPORT_FUNCTIONS zap_root_password create_etc_timestamp rootfs_mount_devices remove_init_link do_rootfs make_zimage_symlink_relative set_image_autologin rootfs_update_timestamp install_linguas
 
 addtask rootfs before do_build after do_install
 addtask deploy_to after do_rootfs
