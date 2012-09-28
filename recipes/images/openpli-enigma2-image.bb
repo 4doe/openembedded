@@ -26,20 +26,19 @@ WIFI_DRIVERS = " \
 
 ENIGMA2_PLUGINS = " \
 				enigma2-plugin-pli-softcamsetup \
-				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-extensions-1channel \
 				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-webinterface \
 				enigma2-plugin-extensions-nstreamvod \
 				enigma2-plugin-extensions-ppanel \
 				enigma2-plugin-extensions-openwebif \
+				enigma2-plugin-extensions-webinterface-old \
 				enigma2-plugin-systemplugins-softwaremanager \
 				enigma2-plugin-systemplugins-positionersetup \
 				enigma2-plugin-extensions-cutlisteditor \
 				enigma2-plugin-systemplugins-satfinder \
 				enigma2-plugin-systemplugins-videotune \
 				enigma2-plugin-extensions-mediascanner \
-				enigma2-plugin-extensions-graphmultiepg \
 				enigma2-plugin-systemplugins-skinselector \
 				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-extensions-pictureplayer \
