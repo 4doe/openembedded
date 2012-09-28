@@ -131,6 +131,7 @@ SRC_URI_append_tmtwin = " \
 						file://control_post \
 						file://update \
 						file://welcome \
+						file://CoolPico.pyo \
 "
 
 SRC_URI_append_ios100 = " \
@@ -166,6 +167,7 @@ SRC_URI_append_ios100 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
+						file://CoolPico.pyo \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -200,6 +202,7 @@ SRC_URI_append_ios200 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
+						file://CoolPico.pyo \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -234,6 +237,7 @@ SRC_URI_append_ios300 = " \
 						file://control_post \
 						file://update \
 						file://welcome \
+						file://CoolPico.pyo \
 "
 
 
@@ -334,6 +338,7 @@ do_install_append_tmtwin(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
@@ -363,6 +368,7 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
+	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -373,6 +379,7 @@ do_install_append_ios100(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
@@ -402,6 +409,7 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
+	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -413,6 +421,7 @@ do_install_append_ios200(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
@@ -442,6 +451,7 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
+	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
@@ -452,6 +462,7 @@ do_install_append_ios300(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
 	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
@@ -481,6 +492,7 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
+	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
