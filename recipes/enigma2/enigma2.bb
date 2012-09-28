@@ -359,7 +359,7 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/index.html ${D}/home/
 	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
 	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
@@ -400,7 +400,7 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/index.html ${D}/home/
 	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
 	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
@@ -442,7 +442,7 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/index.html ${D}/home/
 	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
 	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
@@ -483,7 +483,7 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/index.html ${D}/home/
 	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
 	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
