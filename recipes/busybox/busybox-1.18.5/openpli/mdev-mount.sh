@@ -73,6 +73,13 @@ case "$ACTION" in
 			fi
 			# Use mkdir as 'atomic' action, failure means someone beat us to the punch
 			MOUNTPOINT="/media/$DEVICETYPE"
+
+			# Remove mountpoint not being used
+			if [ -z "`grep $MOUNTPOINT /proc/mounts`" ];
+			then 
+				rm -rf $MOUNTPOINT
+			fi
+
 			if ! mkdir $MOUNTPOINT
 			then
 				MOUNTPOINT="/media/$MDEV"
