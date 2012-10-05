@@ -1,5 +1,5 @@
 
-IMAGE_PREPROCESS_COMMAND = "create_etc_timestamp"
+IMAGE_PREPROCESS_COMMAND = "create_etc_timestamp rootfs_mount_devices"
 
 BOOTLOGO ?= "openpli-bootlogo"
 

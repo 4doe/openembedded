@@ -329,7 +329,7 @@ fi
 }
 
 # export the zap_root_password, create_etc_timestamp and remote_init_link
-EXPORT_FUNCTIONS zap_root_password create_etc_timestamp rootfs_mount_devices remove_init_link do_rootfs make_zimage_symlink_relative set_image_autologin rootfs_update_timestamp install_linguas
+EXPORT_FUNCTIONS zap_root_password create_etc_timestamp remove_init_link do_rootfs make_zimage_symlink_relative set_image_autologin rootfs_update_timestamp rootfs_mount_devices install_linguas
 
 addtask rootfs before do_build after do_install
 addtask deploy_to after do_rootfs
