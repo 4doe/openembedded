@@ -9,7 +9,8 @@ LICENSE = "LGPLv2.1"
 #FIXME: remove the following
 ARM_INSTRUCTION_SET = "arm"
 
-SRC_URI = "ftp://ftp.alsa-project.org/pub/lib/alsa-lib-${PV}.tar.bz2 \
+#SRC_URI = "ftp://ftp.alsa-project.org/pub/lib/alsa-lib-${PV}.tar.bz2 \
+SRC_URI = "http://opengit.homelinux.com/OpenPLi/src/alsa-lib-${PV}.tar.gz2 \
            file://fix-tstamp-declaration.patch \
            file://fix_libmath.patch \
 	  "
