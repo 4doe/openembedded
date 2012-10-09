@@ -160,14 +160,6 @@ SRC_URI_append_tm2toe = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
-						file://index.html \
-						file://logo.png \
-						file://miniweb.css \
-						file://backup_login \
-						file://control \
-						file://control_post \
-						file://update \
-						file://welcome \
 						file://CoolPico.pyo \
 						file://def_ins \
 "
@@ -197,14 +189,6 @@ SRC_URI_append_tmsingle = " \
 						file://menu.xml \
 						file://iq.conf \
 						file://pli.conf \
-						file://index.html \
-						file://logo.png \
-						file://miniweb.css \
-						file://backup_login \
-						file://control \
-						file://control_post \
-						file://update \
-						file://welcome \
 						file://CoolPico.pyo \
 						file://def_ins \
 "
