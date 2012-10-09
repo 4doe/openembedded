@@ -109,9 +109,6 @@ IMAGE_INSTALL += " \
 				${@base_contains("MACHINE_FEATURES", "wifi", "${WIFI_DRIVERS}", "", d)} \
 				enigma2-plugin-softcams-cccam221 \
 				enigma2-plugin-softcams-cccam-config \
-				enigma2-plugin-softcams-mgcamd \
-				enigma2-plugin-softcams-newcs-config \
-				enigma2-plugin-softcams-newcs \
 				"
 
 OPTIONAL_PACKAGES += " \
