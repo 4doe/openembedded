@@ -465,14 +465,6 @@ do_install_append_tm2toe(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/index.html ${D}/home/
-	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
-	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
-	install -m 0755 ${WORKDIR}/backup_login ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
@@ -508,14 +500,6 @@ do_install_append_tmsingle(){
 	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/index.html ${D}/home/
-	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
-	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
-	install -m 0755 ${WORKDIR}/backup_login ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
