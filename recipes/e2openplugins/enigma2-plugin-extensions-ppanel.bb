@@ -6,33 +6,34 @@ require openplugins-replace-pli.inc
 require openplugins-distutils.inc
 
 SRC_URI_append_tmtwin = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
 
 SRC_URI_append_ios100 = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
 
 SRC_URI_append_ios200 = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
 
 SRC_URI_append_ios300 = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
 
 SRC_URI_append_tm2toe = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
 SRC_URI_append_tmsingle = " \
-						CCcam.xml \
-						PPanel_tutorial.xml \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
 						 "
+
 do_install_append_tmtwin(){
 		install -d ${D}/etc/ppanels
 		install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
