@@ -37,7 +37,6 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-systemplugins-videotune \
 				enigma2-plugin-extensions-mediascanner \
 				enigma2-plugin-systemplugins-skinselector \
-				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-extensions-pictureplayer \
 				enigma2-plugin-extensions-mediaplayer \
 				enigma2-plugin-systemplugins-networkbrowser \
@@ -109,3 +108,5 @@ OPTIONAL_PACKAGES += " \
 			"
 
 export IMAGE_BASENAME = "openpli-enigma2"
+#				enigma2-plugin-systemplugins-crossepg \
+
