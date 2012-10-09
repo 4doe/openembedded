@@ -193,7 +193,6 @@ SRC_URI_append_tmsingle = " \
 						file://def_ins \
 "
 
->>>>>>> 74ca380ff7f08f064d796b0ea75d800389ab288a
 SRC_URI_append_ios100 = " \
  						file://arrowdown.png \
 						file://arrowleft.png \
@@ -509,7 +508,6 @@ do_install_append_tmsingle(){
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
 }
->>>>>>> 74ca380ff7f08f064d796b0ea75d800389ab288a
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
