@@ -24,16 +24,16 @@ SRC_URI_append_tmtwin = " \
 SRC_URI_append_tm2toe = " \
 						 file://base.py \
 						 file://info.py \
-						 file://twin.html \
-						 file://TWIN.jpg \
-						 file://twin.png \
+						 file://2t.html \
+						 file://2T.jpg \
+						 file://2t.png \
 						 "
 SRC_URI_append_tmsignle = " \
 						 file://base.py \
 						 file://info.py \
-						 file://twin.html \
-						 file://TWIN.jpg \
-						 file://twin.png \
+						 file://single.html \
+						 file://SINGLE.jpg \
+						 file://single.png \
 						 "
 SRC_URI_append_ios100 = " \
 						 file://base.py \
