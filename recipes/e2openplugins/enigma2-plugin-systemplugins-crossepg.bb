@@ -17,16 +17,16 @@ inherit python-dir
 require openplugins.inc
 
 SRC_URI_append_tmtwin = " \
-						file:// crossepg_menu.py \
-						file:// plugin.py \
+						file://crossepg_menu.py \
+						file://plugin.py \
 						 "
 SRC_URI_append_tm2toe = " \
-						file:// crossepg_menu.py \ 
-						file:// plugin.py \
+						file://crossepg_menu.py \ 
+						file://plugin.py \
 						 "
 SRC_URI_append_tmsingle = " \
-						file:// crossepg_menu.py \ 
-						file:// plugin.py \
+						file://crossepg_menu.py \ 
+						file://plugin.py \
 						 "
 
 SRC_URI_append_ios100 = " \
