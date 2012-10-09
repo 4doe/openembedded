@@ -29,10 +29,18 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-1channel \
 				enigma2-plugin-extensions-cooltvguide \
 				enigma2-plugin-extensions-ppanel \
+				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-extensions-openwebif \
+				enigma2-plugin-extensions-shoutcast \
+				enigma2-plugin-extensions-permanenttimeshift \
+				enigma2-plugin-extensions-satelliteequipmentcontrol \
+				enigma2-plugin-extensions-tssateditor \
 				enigma2-plugin-systemplugins-softwaremanager \
 				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-systemplugins-positionersetup \
+				enigma2-plugin-systemplugins-networkwizard \
+				enigma2-plugin-systemplugins-videoenhancement \
+				enigma2-plugin-systemplugins-tempfancontrol \
 				enigma2-plugin-extensions-cutlisteditor \
 				enigma2-plugin-systemplugins-satfinder \
 				enigma2-plugin-systemplugins-videotune \
@@ -48,7 +56,6 @@ ENIGMA2_PLUGINS = " \
 				${@base_contains("MACHINE_FEATURES", "dvb-c", "enigma2-plugin-systemplugins-cablescan" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "frontprocessor", "enigma2-plugin-systemplugins-frontprocessorupgrade" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "hdtv", "enigma2-plugin-systemplugins-videomode" , "", d)} \
-				${@base_contains("MACHINE_FEATURES", "3dtv", "enigma2-plugin-systemplugins-osd3dsetup" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "wifi", "enigma2-plugin-systemplugins-wirelesslan", "", d)} \
 				"
 
@@ -86,6 +93,7 @@ ENIGMA2_OPTIONAL = " \
 				nano \
 				${@base_contains("MACHINE_FEATURES", "blindscan-dvbc", "virtual/blindscan-dvbc" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "blindscan-dvbs", "virtual/blindscan-dvbs" , "", d)} \
+				${@base_contains("MACHINE_FEATURES", "3dtv", "enigma2-plugin-systemplugins-osd3dsetup" , "", d)} \
 				${@base_contains("MACHINE_FEATURES", "blindscan-dvbs", "enigma2-plugin-systemplugins-satscan" , "", d)} \
 				enigma2-plugin-extensions-et-livestream \
 				"
@@ -100,9 +108,9 @@ IMAGE_INSTALL += " \
 				${@base_contains("MACHINE_FEATURES", "wifi", "${WIFI_DRIVERS}", "", d)} \
 				enigma2-plugin-softcams-cccam221 \
 				enigma2-plugin-softcams-cccam-config \
-				enigma2-plugin-softcams-newcs \
-				enigma2-plugin-softcams-newcs-config \
 				enigma2-plugin-softcams-mgcamd \
+				enigma2-plugin-softcams-newcs-config \
+				enigma2-plugin-softcams-newcs \
 				"
 
 OPTIONAL_PACKAGES += " \
