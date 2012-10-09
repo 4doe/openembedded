@@ -135,7 +135,6 @@ SRC_URI_append_tmtwin = " \
 						file://def_ins \
 "
 
-=======
 SRC_URI_append_tm2toe = " \
  						file://arrowdown.png \
 						file://arrowleft.png \
