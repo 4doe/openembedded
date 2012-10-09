@@ -48,6 +48,8 @@ FILES_${PN}-dbg += "/usr/crossepg/scripts/mhw2epgdownloader/.debug"
 
 CFLAGS_append = " -I${STAGING_INCDIR}/libxml2/ -I${STAGING_INCDIR}/${PYTHON_DIR}/"
 
+PLUGINPATH = "/usr/lib/enigma2/python/Plugins/SystemPlugins/${MODULE}"
+
 do_compile() {
 	echo ${PKGV} > ${S}/VERSION
 	oe_runmake SWIG="swig"
