@@ -24,6 +24,10 @@ SRC_URI_append_tm2toe = " \
 						file:// crossepg_menu.py \ 
 						file:// plugin.py \
 						 "
+SRC_URI_append_tmsingle = " \
+						file:// crossepg_menu.py \ 
+						file:// plugin.py \
+						 "
 
 SRC_URI_append_ios100 = " \
 						 file://crossepg_menu.py \
@@ -58,6 +62,9 @@ do_install_append_tmtwin() {
 	oe_runmake 'D=${D}' install
 }
 do_install_append_tm2toe() {
+	oe_runmake 'D=${D}' install
+}
+do_install_append_tmsingle() {
 	oe_runmake 'D=${D}' install
 }
 do_install_append_ios100() {

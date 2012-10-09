@@ -28,6 +28,13 @@ SRC_URI_append_tm2toe = " \
 						 file://TWIN.jpg \
 						 file://twin.png \
 						 "
+SRC_URI_append_tmsignle = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://TWIN.jpg \
+						 file://twin.png \
+						 "
 SRC_URI_append_ios100 = " \
 						 file://base.py \
 						 file://info.py \
@@ -67,6 +74,10 @@ do_install_append_tmtwin () {
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 }
 do_install_append_tm2toe () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+}
+do_install_append_tmsingle () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 }
