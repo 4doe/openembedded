@@ -134,7 +134,7 @@ SRC_URI_append_tmtwin = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 
 SRC_URI_append_tm2toe = " \
@@ -165,7 +165,7 @@ SRC_URI_append_tm2toe = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 
 SRC_URI_append_tmsingle = " \
@@ -196,7 +196,7 @@ SRC_URI_append_tmsingle = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 
 SRC_URI_append_ios100 = " \
@@ -235,7 +235,7 @@ SRC_URI_append_ios100 = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -273,7 +273,7 @@ SRC_URI_append_ios200 = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -311,7 +311,7 @@ SRC_URI_append_ios300 = " \
 						file://CoolPico.pyo \
 						file://def_ins \
 						file://CCcam.xml \
-						file://PPanel_tutorial.xml
+						file://PPanel_tutorial.xml \
 "
 
 
