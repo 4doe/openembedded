@@ -6,7 +6,9 @@ PR = "r3"
 
 PV = "1.0+svn${SRCREV}"
 
-SRC_URI = "${PLISVNURL}/${PLISVNBRANCH}/cdk/cdk;module=root;proto=${PLISVNPROTO}"
+SRC_URI = "${PLISVNURL}/${PLISVNBRANCH}/cdk/cdk;module=root;proto=${PLISVNPROTO} \
+		file://satellites.xml \
+		"
 
 FILES_${PN} = "/"
 
@@ -30,4 +32,5 @@ do_install() {
 		ln -sf /etc/tuxbox/$i ${D}/usr/share/;
 		ln -sf /etc/tuxbox/$i ${D}/usr/share/tuxbox/;
 	done;
+	cp ${S}/satellites.xml ${D}/etc/tuxbox/
 }

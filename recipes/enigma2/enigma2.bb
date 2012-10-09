@@ -135,7 +135,6 @@ SRC_URI_append_tmtwin = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_tm2toe = " \
@@ -167,7 +166,6 @@ SRC_URI_append_tm2toe = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_tmsingle = " \
@@ -199,7 +197,6 @@ SRC_URI_append_tmsingle = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_ios100 = " \
@@ -239,7 +236,6 @@ SRC_URI_append_ios100 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -278,7 +274,6 @@ SRC_URI_append_ios200 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -317,7 +312,6 @@ SRC_URI_append_ios300 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 
@@ -418,6 +412,7 @@ do_install_append_tmtwin(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
@@ -453,10 +448,10 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/ 
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
@@ -464,6 +459,8 @@ do_install_append_tmtwin(){
 do_install_append_tm2toe(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -492,10 +489,10 @@ do_install_append_tm2toe(){
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
@@ -503,6 +500,8 @@ do_install_append_tm2toe(){
 do_install_append_tmsingle(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/var/
+	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -529,10 +528,10 @@ do_install_append_tmsingle(){
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
@@ -540,6 +539,8 @@ do_install_append_tmsingle(){
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/var/
+	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -576,10 +577,10 @@ do_install_append_ios100(){
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/ 
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
@@ -588,6 +589,8 @@ do_install_append_ios100(){
 do_install_append_ios200(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/var/
+	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -624,10 +627,10 @@ do_install_append_ios200(){
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
@@ -635,6 +638,7 @@ do_install_append_ios200(){
 do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -671,10 +675,10 @@ do_install_append_ios300(){
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
-	install -m 0755 ${WORKDIR}/satellites.xml ${D}/etc/tuxbox/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
