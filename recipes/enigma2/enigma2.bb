@@ -30,8 +30,8 @@ RDEPENDS_${PN} += "${@base_contains("MACHINE_FEATURES", "blindscan-dvbc", "virtu
 
 # PLi-HD is the default skin for HD hardware, and Magic for SD hardware
 DEFAULTSKIN = "${@base_contains("MACHINE_FEATURES", "hdtv", \
-					"enigma2-plugin-skins-magic", \
 					"enigma2-plugin-skins-pli-hd", \
+					"enigma2-plugin-skins-magic", \
 					d)}"
 
 # Depend on the defaultskin
