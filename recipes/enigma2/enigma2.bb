@@ -30,8 +30,8 @@ RDEPENDS_${PN} += "${@base_contains("MACHINE_FEATURES", "blindscan-dvbc", "virtu
 
 # PLi-HD is the default skin for HD hardware, and Magic for SD hardware
 DEFAULTSKIN = "${@base_contains("MACHINE_FEATURES", "hdtv", \
-					"enigma2-plugin-skins-magic", \
 					"enigma2-plugin-skins-pli-hd", \
+					"enigma2-plugin-skins-magic", \
 					d)}"
 
 # Depend on the defaultskin
@@ -99,80 +99,6 @@ SRC_URI = "git://github.com/4doe/enigma2.git;protocol=git;branch=${ENIGMA2_BRANC
 #@ 20120830
 
 SRC_URI_append_tmtwin = " \
- 						file://arrowdown.png \
-						file://arrowleft.png \
-						file://arrowright.png \
-						file://arrowup.png \
-						file://keymap.xml \
-						file://rcold.png \
-						file://rc.png \
-						file://rcpositions.xml \
-						file://enigma2_end.sh \
-						file://enigma2_pre_start.sh \
-						file://enigma2.sh \
-						file://keycheck_pr \
-						file://restore.sh \
-						file://update_pr \
-						file://var \
-						file://skin.xml \
-						file://startwizard.xml \
-						file://input_rcnew.png \
-						file://input_rcnew-configured.png \
-						file://input_rcold.png \
-						file://input_rcold-configured.png \
-						file://menu.xml \
-						file://iq.conf \
-						file://pli.conf \
-						file://index.html \
-						file://logo.png \
-						file://miniweb.css \
-						file://backup_login \
-						file://control \
-						file://control_post \
-						file://update \
-						file://welcome \
-						file://CoolPico.pyo \
-						file://def_ins \
-"
-
-SRC_URI_append_tm2toe = " \
- 						file://arrowdown.png \
-						file://arrowleft.png \
-						file://arrowright.png \
-						file://arrowup.png \
-						file://keymap.xml \
-						file://rcold.png \
-						file://rc.png \
-						file://rcpositions.xml \
-						file://enigma2_end.sh \
-						file://enigma2_pre_start.sh \
-						file://enigma2.sh \
-						file://keycheck_pr \
-						file://restore.sh \
-						file://update_pr \
-						file://var \
-						file://skin.xml \
-						file://startwizard.xml \
-						file://input_rcnew.png \
-						file://input_rcnew-configured.png \
-						file://input_rcold.png \
-						file://input_rcold-configured.png \
-						file://menu.xml \
-						file://iq.conf \
-						file://pli.conf \
-						file://index.html \
-						file://logo.png \
-						file://miniweb.css \
-						file://backup_login \
-						file://control \
-						file://control_post \
-						file://update \
-						file://welcome \
-						file://CoolPico.pyo \
-						file://def_ins \
-"
-
-SRC_URI_append_tmsingle = " \
  						file://arrowdown.png \
 						file://arrowleft.png \
 						file://arrowright.png \
@@ -448,92 +374,6 @@ do_install_append_tmtwin(){
 	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/ 
-	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
-	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
-	cp ${WORKDIR}/var ${D}/etc/var.tar
-	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
-}
-do_install_append_tm2toe(){
-	install -d 0755 ${D}/usr/bin/
-	install -d 0755 ${D}/etc/
-	install -d 0755 ${D}/home/http/cgi-bin/
-	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
-	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/index.html ${D}/home/
-	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
-	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
-	install -m 0755 ${WORKDIR}/backup_login ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
-	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
-	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
-	cp ${WORKDIR}/var ${D}/etc/var.tar
-	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
-	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
-}
-do_install_append_tmsingle(){
-	install -d 0755 ${D}/usr/bin/
-	install -d 0755 ${D}/etc/
-	install -d 0755 ${D}/home/http/cgi-bin/
-	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
-	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
-	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
-	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
-	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
-	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
-	install -m 0755 ${WORKDIR}/index.html ${D}/home/
-	install -m 0755 ${WORKDIR}/logo.png ${D}/home/
-	install -m 0755 ${WORKDIR}/miniweb.css ${D}/home/
-	install -m 0755 ${WORKDIR}/backup_login ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/control_post ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/update ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/welcome ${D}/home/http/cgi-bin/
-	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
-	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
 	cp ${WORKDIR}/var ${D}/etc/var.tar
