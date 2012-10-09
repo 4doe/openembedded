@@ -31,6 +31,7 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-ppanel \
 				enigma2-plugin-extensions-openwebif \
 				enigma2-plugin-systemplugins-softwaremanager \
+				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-systemplugins-positionersetup \
 				enigma2-plugin-extensions-cutlisteditor \
 				enigma2-plugin-systemplugins-satfinder \
@@ -108,5 +109,4 @@ OPTIONAL_PACKAGES += " \
 			"
 
 export IMAGE_BASENAME = "openpli-enigma2"
-#				enigma2-plugin-systemplugins-crossepg \
 
