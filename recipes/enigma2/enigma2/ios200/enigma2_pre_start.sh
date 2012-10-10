@@ -285,6 +285,8 @@ init_softcam_link()
 	fi
 }
 
+sleep 2
+
 generate_default_ipkg_list
 # [iq
 #keycheck_process
