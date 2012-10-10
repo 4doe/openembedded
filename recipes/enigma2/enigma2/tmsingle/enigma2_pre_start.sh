@@ -280,7 +280,7 @@ init_softcam_link()
 	if [ -e /etc/init.d/softcam.CCcam221 ]; then
 		ln -s /etc/init.d/softcam.CCcam221 /etc/init.d/softcam
 		ln -s /etc/init.d/cardserver.None /etc/init.d/cardserver
-
+		sleep 2
 		/etc/init.d/softcam start
 	fi
 }
