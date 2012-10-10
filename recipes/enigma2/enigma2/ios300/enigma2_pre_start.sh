@@ -267,12 +267,21 @@ generate_default_ipkg_list()
 
 init_softcam_link()
 {
-	if [ -e /etc/init.d/softcam.CCcam221 ]; then
+	if [ -e /etc/init.d/softcam ]; then
+		/etc/init.d/softcam stop
 		rm -f /etc/init.d/softcam
-		ln -s /etc/init.d/softcam.CCcam221 /etc/init.d/softcam
-		
+	fi
+
+	if [ -e /etc/init.d/cardserver ]; then
+		/etc/init.d/cardserver stop
 		rm -f /etc/init.d/cardserver
+	fi
+
+	if [ -e /etc/init.d/softcam.CCcam221 ]; then
+		ln -s /etc/init.d/softcam.CCcam221 /etc/init.d/softcam
 		ln -s /etc/init.d/cardserver.None /etc/init.d/cardserver
+
+		/etc/init.d/softcam start
 	fi
 }
 
