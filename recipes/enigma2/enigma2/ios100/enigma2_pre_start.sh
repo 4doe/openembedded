@@ -260,6 +260,19 @@ generate_default_ipkg_list()
 {
 	if [ ! -e /usr/lib/ipkg/ipkg_list_factory ]; then
 		ipkg list-installed | awk '{print $1}' | sort > /usr/lib/ipkg/ipkg_list_factory
+
+		init_softcam_link
+	fi
+}
+
+init_softcam_link()
+{
+	if [ -e /etc/init.d/softcam.CCcam221 ]; then
+		rm -f /etc/init.d/softcam
+		ln -s /etc/init.d/softcam.CCcam221 /etc/init.d/softcam
+		
+		rm -f /etc/init.d/cardserver
+		ln -s /etc/init.d/cardserver.None /etc/init.d/cardserver
 	fi
 }
 
