@@ -528,6 +528,8 @@ do_install_append_tmsingle(){
 	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
 	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
+	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
+	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
 	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
 	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
 	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
