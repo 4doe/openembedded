@@ -5,7 +5,8 @@ SRC_URI = "file://modutils.sh"
 PR = "r4"
 
 INITSCRIPT_NAME = "modutils.sh"
-INITSCRIPT_PARAMS = "start 20 S ."
+#INITSCRIPT_PARAMS = "start 20 S ."
+INITSCRIPT_PARAMS = "start 01 S ."
 
 inherit update-rc.d
 
