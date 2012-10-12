@@ -638,6 +638,7 @@ do_install_append_ios200(){
 do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
