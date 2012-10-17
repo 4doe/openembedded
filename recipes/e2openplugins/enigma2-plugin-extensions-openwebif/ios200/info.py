@@ -14,7 +14,6 @@ from Components.Harddisk import harddiskmanager
 from Components.Network import iNetwork
 from RecordTimer import parseEvent
 from Screens.Standby import inStandby
-from Tools.DreamboxHardware import getFPVersion
 from Tools.Directories import fileExists, pathExists
 from time import time, localtime, strftime
 from enigma import eDVBVolumecontrol, eServiceCenter
@@ -65,18 +64,28 @@ def getInfo():
 	brand = "Dream Multimedia"
 	model = "unknown"
 	chipset = "unknown"
-# [iq Hardware type read	
+	
 	if fileExists("/proc/stb/info/hwmodel"):
 		brand = "4D"
 		f = open("/proc/stb/info/hwmodel",'r')
+		model = f.readline().strip()
+		f.close()
+	elif fileExists("/proc/stb/info/vumodel"):
+		brand = "Vuplus"
+		f = open("/proc/stb/info/vumodel",'r')
  		model = f.readline().strip()
  		f.close()
-		# iq]
-	elif fileExists("/proc/stb/info/boxtype"):
-		brand = "Clarke-Xtrend"
-		f = open("/proc/stb/info/boxtype",'r')
+	elif fileExists("/proc/stb/info/azmodel"):
+		brand = "AZBOX"
+		f = open("/proc/stb/info/model",'r')
  		model = f.readline().strip()
  		f.close()
+ 		if model == "me":
+			chipset = "SIGMA 8655"
+ 		elif model == "minime":
+			chipset = "SIGMA 8653"
+ 		else:
+			chipset = "SIGMA 8634"
 	else:
 		f = open("/proc/stb/info/model",'r')
  		model = f.readline().strip()
@@ -131,7 +140,12 @@ def getInfo():
 	info['imagever'] = imagever
 	info['enigmaver'] = about.getEnigmaVersionString()
 	info['kernelver'] = about.getKernelVersionString()
-	
+
+	try:
+		from Tools.StbHardware import getFPVersion
+	except ImportError:
+		from Tools.DreamboxHardware import getFPVersion
+
 	info['fp_version'] = getFPVersion()
 	
 	info['tuners'] = []

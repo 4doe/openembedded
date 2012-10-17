@@ -17,7 +17,7 @@ SRC_URI_append_tmtwin = " \
 						 file://base.py \
 						 file://info.py \
 						 file://twin.html \
-						 file://TWIN.jpg \
+						 file://twin.jpg \
 						 file://twin.png \
 						 "
 
@@ -25,36 +25,36 @@ SRC_URI_append_tm2toe = " \
 						 file://base.py \
 						 file://info.py \
 						 file://2t.html \
-						 file://2T.jpg \
+						 file://2t.jpg \
 						 file://2t.png \
 						 "
 SRC_URI_append_tmsignle = " \
 						 file://base.py \
 						 file://info.py \
 						 file://single.html \
-						 file://SINGLE.jpg \
+						 file://single.jpg \
 						 file://single.png \
 						 "
 SRC_URI_append_ios100 = " \
-						 file://base.py \
-						 file://info.py \
-						 file://twin.html \
-						 file://TWIN.jpg \
-						 file://twin.png \
+						file://base.py \
+						file://info.py \
+						file://ios200hd.jpg \
+						file://ios200hd.png \
+						file://ios200hd.html \
 						 "
 SRC_URI_append_ios200 = " \
-						 file://base.py \
-						 file://info.py \
-						 file://twin.html \
-						 file://TWIN.jpg \
-						 file://twin.png \
+						file://base.py \
+						file://info.py \
+						file://ios200hd.jpg \
+						file://ios200hd.png \
+						file://ios200hd.html \
 						 "
 SRC_URI_append_ios300 = " \
-						 file://base.py \
-						 file://info.py \
-						 file://twin.html \
-						 file://TWIN.jpg \
-						 file://twin.png \
+						file://base.py \
+						file://info.py \
+						file://ios300hd.jpg \
+						file://ios300hd.png \
+						file://ios300hd.html \
 						 "
 
 # Just a quick hack to "compile" it
@@ -72,26 +72,56 @@ PLUGINPATH = "/usr/lib/enigma2/python/Plugins/Extensions/${MODULE}"
 do_install_append_tmtwin () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/twin.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/twin.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/twin.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_tm2toe () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/2t.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/2t.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/2t.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_tmsingle () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/single.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/single.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/single.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios100 () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios100hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios100hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios100hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios200 () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios200hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios200hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios200hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios300 () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios300hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios300hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios300hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 
 FILES_${PN} = "${PLUGINPATH}"

@@ -21,21 +21,21 @@ import json
 
 class BaseController(resource.Resource):
 	isLeaf = False
-
+	
 	def __init__(self, path = ""):
 		resource.Resource.__init__(self)
-
+		
 		self.path = path
 		self.withMainTemplate = False
 		self.isJson = False
 		self.isCustom = False
-
+	
 	def error404(self, request):
 		request.setHeader("content-type", "text/html")
 		request.setResponseCode(http.NOT_FOUND)
 		request.write("<html><head><title>Open Webif</title></head><body><h1>Error 404: Page not found</h1><br />The requested URL was not found on this server.</body></html>")
 		request.finish()
-
+		
 	def loadTemplate(self, path, module, args):
 		if fileExists(getViewsPath(path + ".py")) or fileExists(getViewsPath(path + ".pyo")):
 			if fileExists(getViewsPath(path + ".pyo")):
@@ -48,31 +48,31 @@ class BaseController(resource.Resource):
 		elif fileExists(getViewsPath(path + ".tmpl")):
 			return str(Template(file=getViewsPath(path + ".tmpl"), searchList=[args]))
 		return None
-
+		
 	def getChild(self, path, request):
 		return self.__class__(self.session, path)
-
+		
 	def render(self, request):
 		# cache data
 		withMainTemplate = self.withMainTemplate
 		path = self.path
 		isJson = self.isJson
 		isCustom = self.isCustom
-
+		
 		if self.path == "":
 			self.path = "index"
-
+		
 		self.suppresslog = False
 		self.path = self.path.replace(".", "")
 		func = getattr(self, "P_" + self.path, None)
 		if callable(func):
 			request.setResponseCode(http.OK)
-
+			
 			# call prePageLoad function if exist
 			plfunc = getattr(self, "prePageLoad", None)
 			if callable(plfunc):
 				plfunc(request)
-
+				
 			data = func(request)
 			if data is None:
 				if not self.suppresslog:
@@ -117,17 +117,17 @@ class BaseController(resource.Resource):
 							out = nout
 					request.write(out)
 					request.finish()
-
+				
 		else:
 			print "[OpenWebif] page '%s' not found" % request.uri
 			self.error404(request)
-
+		
 		# restore cached data
 		self.withMainTemplate = withMainTemplate
 		self.path = path
 		self.isJson = isJson
 		self.isCustom = isCustom
-
+		
 		return server.NOT_DONE_YET
 
 	def prepareMainTemplate(self):
@@ -137,21 +137,26 @@ class BaseController(resource.Resource):
 		ret['configsections'] = getConfigsSections()['sections']
 		ret['zapstream'] = getZapStream()['zapstream']
 		ret['box'] = "dmm"
-		if open("/proc/stb/info/model",'r').read().strip() == "Gigablue":
-			ret['box'] = "gigablue"
 		if fileExists("/proc/stb/info/hwmodel"):
 			ret['box'] = open("/proc/stb/info/hwmodel").read().strip()
 		elif fileExists("/proc/stb/info/vumodel"):
 			ret['box'] = open("/proc/stb/info/vumodel").read().strip()
-		elif fileExists("/proc/stb/info/boxtype"):
-			ret['box'] = open("/proc/stb/info/boxtype").read().strip()
+		elif fileExists("/proc/stb/info/azmodel"):
+			ret['box'] = open("/proc/stb/info/model").read().strip()
 
-		if ret["box"] == "TM-TWIN-OE":
-			ret["remote"] = "tm_twin"
-		elif ret["box"] == "TWIN":
-			ret["remote"] = "twin"
-		elif ret["box"] == "duo" or ret["box"] == "solo" or ret["box"] == "uno":
-			ret["remote"] = "vu_normal"
+			
+		if ret["box"] == "ios200hd":
+			ret["remote"] = "ios200hd"
+		elif ret["box"] == "ios300hd":
+			ret["remote"] == "ios300hd"
+		elif ret["box"] == "ios100hd":
+			ret["remote"] == "ios100hd"
+		elif ret["box"] == "tmsingle":
+			ret["remote"] == "single"
+		elif ret["box"] == "2t":
+			ret["remote"] == "2t"
+		elif ret["box"] == "twin":
+			ret["remote"] == "twin"
 		elif ret["box"] == "ultimo":
 			ret["remote"] = "vu_ultimo"
 		elif ret["box"] == "et9x00" or ret["box"] == "et9000" or ret["box"] == "et9200":
@@ -160,7 +165,18 @@ class BaseController(resource.Resource):
 			ret["remote"] = "et5x00"
 		elif ret["box"] == "gigablue":
 			ret["remote"] = "gigablue"
+		elif ret["box"] == "me" or ret["box"] == "minime":
+			ret["remote"] = "me"
+		elif ret["box"] == "premium" or ret["box"] == "premium+":
+			ret["remote"] = "premium"
+		elif ret["box"] == "elite" or ret["box"] == "ultra":
+			ret["remote"] = "elite"
+		elif ret["box"] == "ini-3000":
+			ret["remote"] = "ini-3000"
+		elif ret["box"] == "ini-7000" or ret["box"] == "ini-5000":
+			ret["remote"] = "ini-7000"
 		else:
 			ret["remote"] = "dmm"
-
+		
 		return ret
+		
