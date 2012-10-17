@@ -4,7 +4,7 @@ MODULE = "CrossEPG"
 LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=4fbd65380cdd255951079008b364516c"
 
-DEPENDS += "libxml2 zlib python"
+DEPENDS += "libxml2 zlib python python-native"
 
 inherit gitpkgv
 SRCREV = ""
