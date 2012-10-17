@@ -38,9 +38,9 @@ SRC_URI_append_tmsignle = " \
 SRC_URI_append_ios100 = " \
 						file://base.py \
 						file://info.py \
-						file://ios200hd.jpg \
-						file://ios200hd.png \
-						file://ios200hd.html \
+						file://ios100hd.jpg \
+						file://ios100hd.png \
+						file://ios100hd.html \
 						 "
 SRC_URI_append_ios200 = " \
 						file://base.py \
