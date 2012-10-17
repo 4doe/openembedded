@@ -72,56 +72,56 @@ PLUGINPATH = "/usr/lib/enigma2/python/Plugins/Extensions/${MODULE}"
 do_install_append_tmtwin () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/twin.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/twin.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/twin.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/twin.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/twin.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/twin.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_tm2toe () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/2t.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/2t.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/2t.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/2t.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/2t.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/2t.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_tmsingle () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/single.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/single.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/single.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/single.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/single.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/single.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios100 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/ios100hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/ios100hd.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/ios100hd.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios100hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios100hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios100hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios200 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/ios200hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/ios200hd.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/ios200hd.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios200hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios200hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios200hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_ios300 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
-	cp -rp ${S}/base.py ${D}${PLUGINPATH}/controllers/
-	cp -rp ${S}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${S}/ios300hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${S}/ios300hd.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${S}/ios300hd.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/ios300hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/ios300hd.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/ios300hd.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 
 FILES_${PN} = "${PLUGINPATH}"
