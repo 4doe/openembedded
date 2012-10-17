@@ -80,7 +80,7 @@ do_install_append_tmtwin () {
 }
 do_install_append_tm2toe () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
 	cp -rp ${WORKDIR}/2t.jpg ${D}${PLUGINPATH}/public/images/boxes/
@@ -89,7 +89,7 @@ do_install_append_tm2toe () {
 }
 do_install_append_tmsingle () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
 	cp -rp ${WORKDIR}/single.jpg ${D}${PLUGINPATH}/public/images/boxes/
@@ -98,7 +98,7 @@ do_install_append_tmsingle () {
 }
 do_install_append_ios100 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
 	cp -rp ${WORKDIR}/ios100hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
@@ -107,7 +107,7 @@ do_install_append_ios100 () {
 }
 do_install_append_ios200 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
 	cp -rp ${WORKDIR}/ios200hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
@@ -116,7 +116,7 @@ do_install_append_ios200 () {
 }
 do_install_append_ios300 () {
 	install -d ${D}${PLUGINPATH}
-	cp -rp ${WORKDIR}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
 	cp -rp ${WORKDIR}/ios300hd.jpg ${D}${PLUGINPATH}/public/images/boxes/
