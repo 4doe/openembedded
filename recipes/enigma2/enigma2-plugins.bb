@@ -39,7 +39,7 @@ DEPENDS = "enigma2 \
 	python-daap \
 	dvdbackup \
 	libcddb \
-        ${@base_contains("MACHINE_FEATURES", "tpm", "" , "enigma2-plugin-extensions-webinterface-old", d)} \
+#${@base_contains("MACHINE_FEATURES", "tpm", "" , "enigma2-plugin-extensions-webinterface-old", d)} \
 	"
 
 python populate_packages_prepend () {
@@ -91,5 +91,5 @@ do_install_append() {
 	# remove unused .pyc files
 	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
 	# remove leftover webinterface garbage
-	${@base_contains('MACHINE_FEATURES', 'tpm','','rm -rf ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface',d)}
+	#${@base_contains('MACHINE_FEATURES', 'tpm','','rm -rf ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebInterface',d)}
 }
