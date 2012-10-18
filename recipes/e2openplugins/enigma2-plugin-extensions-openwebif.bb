@@ -28,7 +28,7 @@ SRC_URI_append_tm2toe = " \
 						 file://2t.jpg \
 						 file://2t.png \
 						 "
-SRC_URI_append_tmsignle = " \
+SRC_URI_append_tmsingle = " \
 						 file://base.py \
 						 file://info.py \
 						 file://single.html \
