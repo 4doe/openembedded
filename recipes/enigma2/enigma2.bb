@@ -135,7 +135,6 @@ SRC_URI_append_tmtwin = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_tm2toe = " \
@@ -167,7 +166,6 @@ SRC_URI_append_tm2toe = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_tmsingle = " \
@@ -199,7 +197,6 @@ SRC_URI_append_tmsingle = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 SRC_URI_append_ios100 = " \
@@ -239,7 +236,6 @@ SRC_URI_append_ios100 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -278,7 +274,6 @@ SRC_URI_append_ios200 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -317,7 +312,6 @@ SRC_URI_append_ios300 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
-						file://satellites.xml \
 "
 
 
