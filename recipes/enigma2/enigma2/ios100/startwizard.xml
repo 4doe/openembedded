@@ -27,8 +27,8 @@ self.condition = len(nimmanager.nim_slots) > 0 and not nimmanager.nim_slots[0].e
 			<config screen="NimSetup" module="Satconfig" args="0" type="ConfigList" />
 			<code>
 self.clearSelectedKeys()
-self.selectKey("BACK")
-self.selectKey("FORWARD")
+self.selectKey("LEFT")
+self.selectKey("RIGHT")
 			</code>
 		</step>
 		<step id="nimb">

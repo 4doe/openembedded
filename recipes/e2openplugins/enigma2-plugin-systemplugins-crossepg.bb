@@ -85,12 +85,8 @@ do_install_append_ios200() {
 	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
 	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/
 }
-
-do_install_append_single() {
+do_install_append_ios300() {
 	oe_runmake 'D=${D}' install
 	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
 	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/
-}
-do_install_append_ios300() {
-	oe_runmake 'D=${D}' install
 }

@@ -1,0 +1,1395 @@
+commit e2f1bc79781b2c91f6aa02583475d17aa4973142
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 16:14:38 2012 +0900
+
+    	1. OpenWebif model image added.
+
+commit f4c3ac51007d1236fadcb09a8c7b53588146cce8
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 16:02:42 2012 +0900
+
+    	1. new channellist upload.
+
+commit a32da90b900ff3acebcd17e30b3fc76c6432cd71
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 16:01:51 2012 +0900
+
+    	1. satellite.xml upload
+
+commit 6bd858045e9bd76ccccc6de03e725b22eca07502
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 15:16:49 2012 +0900
+
+    	1. OpenWebinterface remocon parsing.
+
+commit 4e66bde488befd518ad805559bdb696996a65dc3
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 18 14:14:07 2012 +0900
+
+    	modified:   recipes/enigma2/enigma2.bb
+
+commit 4a25b243881ba7cd706d6a519a6f6fd5d067da24
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Thu Oct 18 13:55:56 2012 +0900
+
+    	modified:   ../ios100/def_ins
+    	modified:   ../ios200/def_ins
+    	modified:   ../ios300/def_ins
+    	modified:   ../tm2toe/def_ins
+    	modified:   ../tmsingle/def_ins
+    	modified:   def_ins
+
+commit 6cabc59bb95291acdffbfa21733602a3cfdfd975
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 13:31:20 2012 +0900
+
+    	1. tmsingle new sat upload.
+
+commit e85744cbe4b95d866f951c26f95155c683ff1cd9
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 11:24:23 2012 +0900
+
+    	1. ios100 front image modify.
+
+commit ebb4cd57ca519eafa9e5961e47a50c512c120d73
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 11:20:28 2012 +0900
+
+    	1. model check error modify.
+
+commit be79e90eff0ffb5ac93abaec9849401e3638bdef
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 10:53:30 2012 +0900
+
+    	1. 2012.10.18
+
+commit cfcf13fe859e73eb6146c2a40ee01fe2f4631796
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 18 10:25:35 2012 +0900
+
+    	1. new channellist upload
+
+commit 575cca141729557f371471e8e75a4446f88ec977
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 18:59:24 2012 +0900
+
+    	1. openwebif plugins error modify.
+
+commit 66d5105a9e099e214023f323ab5f1080421c9df0
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 18:07:49 2012 +0900
+
+    	1. ios100hd model kernel .bb file upload.
+
+commit e07ca1d72971839df64c0882fa7ccc80fe0ec787
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 17:34:00 2012 +0900
+
+    	1. tmsingle menu.xml modify.
+
+commit 51418831c793e47ac5bc44408449531bb57976af
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 17:32:41 2012 +0900
+
+    	1. ios300hd menu.xml
+
+commit afcf8f86fb844d9686a61bc40cf8c95bb746a188
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 17:26:25 2012 +0900
+
+    	1. update for 2012.10.17 update driver.
+
+commit 8881f30afe446869d8d501cd2ece32e209f98b09
+Merge: ba191bb 3e3e622
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 17:25:35 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit ba191bb7df49bf1bda2c3f439c529cf7e4e780ea
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 17:24:47 2012 +0900
+
+    	1. ios100 kernel build patch and config file.
+
+commit 3e3e62251c1423f1870bf19e6ef5deeaa8e063c9
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Wed Oct 17 17:04:56 2012 +0900
+
+    	modified:   cfe.bin
+
+commit c12164c2e11618c7c44962414232dd8b8812c548
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Wed Oct 17 16:45:47 2012 +0900
+
+    	modified:   cfe.bin
+
+commit b9d2075c0a42033bbef9609b171a95773b087079
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Wed Oct 17 16:28:33 2012 +0900
+
+    	modified:   cfe.bin
+
+commit 40dd22b6e5741edcd758266e5fbfb20b96d876ea
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 15:54:07 2012 +0900
+
+    	1. webinterface default remove 4d.
+
+commit 7cf1db8d7201d993997d7b132f1a3e80b814f2af
+Merge: f9a6b34 f37e245
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Wed Oct 17 15:38:36 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit f9a6b3482ff9ab56b924a36fb74df36bcb9212b5
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Wed Oct 17 15:37:57 2012 +0900
+
+    	modified:   recipes/e2openplugins/enigma2-plugin-systemplugins-crossepg.bb
+
+commit f37e2459869de85e215032f27e9120b00e7f103b
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 13:36:32 2012 +0900
+
+    	1. PLi source mirror site added.
+
+commit 3dcf9189673619cb841081fb9ba23c90fe554b34
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 13:34:51 2012 +0900
+
+    	1. OpenWebif Plugins divide by model
+
+commit 4bc57e04412da74b1bb4c2866db268efcb03acee
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 12:25:40 2012 +0900
+
+    	1. install file error modify.
+
+commit d947b97dc742054f6f7472ec11efa74e06b8572c
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 12:13:32 2012 +0900
+
+    	1. openwebif file modify.
+
+commit 0de6564e739fb58dcccd5153435707bd444d0114
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 17 12:11:50 2012 +0900
+
+    	1. remocon model added ( ios100, ios200, ios300, tm2toe, tmsingle, tmtwin )
+
+commit 6ae8fb865bb7d96ac5294f561147f09603b578f3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Mon Oct 15 17:23:03 2012 +0900
+
+    	1. postion modify.
+
+commit e632ef1eb57d8daa8b2cdca45c30f62de8a33caa
+Author: fermi <perpect7@dags.kr>
+Date:   Mon Oct 15 15:03:26 2012 +0900
+
+    	1. ios100,ios200,ios300 rcu picture added
+
+commit 8b04a5c29e895d498d48f37374bf16291d89c874
+Author: fermi <perpect7@dags.kr>
+Date:   Fri Oct 12 17:35:03 2012 +0900
+
+    	1. harddisk bootking problem modify
+
+commit dc72e487152192deaf21ecf8a3b63a18ea60a234
+Merge: dbdb2dc d7e3385
+Author: fermi <perpect7@dags.kr>
+Date:   Fri Oct 12 16:24:53 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit dbdb2dcb9cec767c65d6c99a2f4f7af98826dfe4
+Author: fermi <perpect7@dags.kr>
+Date:   Fri Oct 12 16:23:32 2012 +0900
+
+    	1. ios series remocon added
+
+commit d7e3385c50cfa2a2175314a3e4757567cef78d3d
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Fri Oct 12 15:08:13 2012 +0900
+
+    	modified:   enigma2/enigma2.bb
+
+commit b33206d08f428dba72705261090d82ee68f582d2
+Author: fermi <perpect7@dags.kr>
+Date:   Fri Oct 12 12:27:42 2012 +0900
+
+    	1. var link modify.
+
+commit d4847fe5de1b0cf50efe6782bb4119c2a2e7d36f
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 11 06:36:27 2012 +0900
+
+    	modified:   ios100/var
+    	modified:   ios200/var
+    	modified:   ios300/var
+    	modified:   tm2toe/var
+    	modified:   tmtwin/var
+
+commit 14753eb45c8aa2cc9f921b6f480b73129efa0c7d
+Merge: d92018f 168ad02
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 11 06:16:22 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit 168ad027072bf894f3a8fa2cdb74d4a0219ca735
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 11 03:08:26 2012 +0900
+
+    	1. cccam time modify.
+
+commit d92018ff42f6cfbf0dfade258a55d757a9df28f2
+Merge: deffee6 dc5aa36
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 11 02:29:16 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit deffee6ecc2e46ecffc100ca92a64fb7e9027acd
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 11 02:28:53 2012 +0900
+
+    	modified:   var
+
+commit dc5aa36a283f955836f50428a7d7b9cf44b4a4be
+Merge: e433b2b ec9cbeb
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 11 02:18:24 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit e433b2bb1aab6db29ee58347d4981ca0c5442893
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 11 02:17:45 2012 +0900
+
+    	1. cam sleep 2s
+
+commit ec9cbebd3fc7afc0c4528393bd82fab2bb65bac4
+Author: theone <theone@theone-ThinkPad-T420.(none)>
+Date:   Thu Oct 11 01:29:14 2012 +0900
+
+    	modified:   meta/distro-feed-configs.bb
+
+commit 94b19e8b169b1fdca197361c6cdd19663e28a26a
+Author: fermi <perpect7@dags.kr>
+Date:   Thu Oct 11 01:01:33 2012 +0900
+
+    	1. mgcamd config modify.
+
+commit 9f40496dcdcdadcc3a32a42c1565a519e1bbc4a2
+Merge: ecd57af fdb03d7
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 22:59:46 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit ecd57afca239bcb71643b7ad2ab16abbd11339c8
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 22:59:01 2012 +0900
+
+    	1. tmtwin patch
+
+commit fdb03d7b4925efdcc939d94f21f0822a11ac78a2
+Merge: 104a38d 17ee045
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Wed Oct 10 22:37:34 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit 104a38d33369acefa3c9dc84587f8a651125f4ab
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Wed Oct 10 22:36:57 2012 +0900
+
+    	modified:   ios100/enigma2_pre_start.sh
+    	modified:   ios200/enigma2_pre_start.sh
+    	modified:   ios300/enigma2_pre_start.sh
+    	modified:   tm2toe/enigma2_pre_start.sh
+    	modified:   tmsingle/enigma2_pre_start.sh
+    	modified:   tmtwin/enigma2_pre_start.sh
+
+commit 17ee045136ce06515e1dd0aad7e31e6065371fd2
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 21:39:02 2012 +0900
+
+    	1. tm2toe, ios100, ios300, tmsingle
+
+commit 7508670fee1a9a81002e86eecab0fb474554d190
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 13:34:59 2012 +0900
+
+           modified:   ios100/enigma2_pre_start.sh
+           modified:   ios200/enigma2_pre_start.sh
+           modified:   ios300/enigma2_pre_start.sh
+           modified:   tm2toe/enigma2_pre_start.sh
+           modified:   tmsingle/enigma2_pre_start.sh
+           modified:   tmtwin/enigma2_pre_start.sh
+
+commit 4a9af9fe8fb22e2a5713f2a104d882294da1d107
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 08:30:52 2012 +0900
+
+    	1. default enigma2 image for cam
+
+commit 4b2a839d3ce21e10e1d9c43c15ca162a5246616e
+Author: fermi <perpect7@dags.kr>
+Date:   Wed Oct 10 04:55:06 2012 +0900
+
+    	1. mgcamd and newcs removed.
+
+commit 3501ac44b918f6542df13de26377d73b65a605f1
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 22:30:33 2012 +0900
+
+    enigma2 bb
+
+commit e810ecb1ba5255466e9fd2096975c0886bbb11bc
+Merge: 916ad76 73c87ca
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 20:12:05 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded into work
+
+commit 916ad7600a50a25cefd38a0b3d0da6aabc2f41dc
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 20:06:19 2012 +0900
+
+    default satellite.xml
+
+commit 73c87ca350f95a60756ceef51b5c0e6d8738ff6c
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 19:33:49 2012 +0900
+
+    	modified:   recipes/e2openplugins/enigma2-plugin-extensions-openwebif.bb
+
+commit e61d568a412a98a5fcff011660cc3bbca51cf63c
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 18:20:24 2012 +0900
+
+    	new file:   files/tm2toe/ignore.list
+    	new file:   files/tm2toe/mg_cfg
+    	new file:   files/tm2toe/newcamd.list
+    	new file:   files/tm2toe/peer.cfg
+    	new file:   files/tm2toe/priority.list
+    	new file:   files/tm2toe/replace.list
+    	new file:   files/tmsingle/ignore.list
+    	new file:   files/tmsingle/mg_cfg
+    	new file:   files/tmsingle/newcamd.list
+    	new file:   files/tmsingle/peer.cfg
+    	new file:   files/tmsingle/priority.list
+    	new file:   files/tmsingle/replace.list
+
+commit bf597c3f126dd8c8c098ddf56862d0fc25343b30
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 16:58:39 2012 +0900
+
+    	1. delete crossepg
+
+commit 2236cf20648b1111b1fcec2f5af0b24dd8caca6f
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 16:49:18 2012 +0900
+
+    cross epg copy modify
+
+commit 28a035809c74aada4840b12aec24a287bdb46271
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 16:20:51 2012 +0900
+
+    crossepg
+
+commit 4fcb1868a6585887eb7b9e88e7abb409b7de1b86
+Merge: 34abfa3 5527704
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 15:47:12 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded into work
+    
+    Conflicts:
+    	recipes/images/openpli-enigma2-image.bb
+
+commit 34abfa3c1afe505cf66ccd4569179f8c3694084e
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 15:44:17 2012 +0900
+
+    driver update
+
+commit 55277041062b5ac41797c7607cfdf48ce8eeba50
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 15:36:55 2012 +0900
+
+    	modified:   ../e2openplugins/enigma2-plugin-extensions-openwebif/tm2toe/2t.html
+    	modified:   ../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/single.html
+
+commit 9d660709b512112df525580acc90a576dce7ed70
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 15:35:42 2012 +0900
+
+    	modified:   openpli-enigma2-image.bb
+
+commit 4e14005c314223fa03614077e259af9de139913b
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 15:31:54 2012 +0900
+
+    	renamed:    TWIN.jpg -> 2T.jpg
+    	renamed:    twin.html -> 2t.html
+    	renamed:    twin.png -> 2t.png
+    	renamed:    ../tmsingle/TWIN.jpg -> ../tmsingle/SINGLE.jpg
+    	renamed:    ../tmsingle/twin.html -> ../tmsingle/single.html
+    	renamed:    ../tmsingle/twin.png -> ../tmsingle/single.png
+
+commit 6b83502c8037a695b5ed3b4969123a2e615351a9
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 15:24:15 2012 +0900
+
+    enigma2.bb
+
+commit 199562814828e22ac6784fc621bb29fb93cf1b1f
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 15:22:09 2012 +0900
+
+    openpli enigma2 image
+
+commit 1c47209a1515283548bc9e6fc4dcdc2f67aec8a6
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 14:57:16 2012 +0900
+
+    ppanel env upload
+
+commit aab6c34e66b921a90cfe3633449baedbb3948b7b
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 14:21:04 2012 +0900
+
+    ppanel
+
+commit 14d673007ad2159a5c1f04a0951df14f5efa1a37
+Merge: e7c1743 9a4993c
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 14:05:52 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded into work
+
+commit e7c174349c1a949ec87424bc1a6ed78e97230bd9
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 14:04:46 2012 +0900
+
+    ppanel add config
+
+commit 9a4993c7ff24c28afe2de4434407b64efb3a8798
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 13:55:28 2012 +0900
+
+    	modified:   recipes/openpli/enigma2-plugin-skins-pli-hd.bb
+    	new file:   recipes/openpli/enigma2-plugin-skins-pli-hd/tmsingle/skin.xml
+
+commit c43c67f03217a3e863a1d297f4678e32a148635a
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:47:15 2012 +0900
+
+    mgcam model install
+
+commit 7944ed4b905e038105bddda98ec3036f10b7bbba
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:35:15 2012 +0900
+
+    enigma2
+
+commit 4185c10569c912b28ec0ed333ae769c327156645
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:34:05 2012 +0900
+
+    enigma2 builderror
+
+commit 52d3b8a80a3e95d1266b3c2211112f54ea94a590
+Merge: 43938ee 74ca380
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:30:57 2012 +0900
+
+    enigma2 error string
+
+commit 43938ee90e6b00e17bc4bfd264ac0537091714d4
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:15:29 2012 +0900
+
+    cross epg default setup
+
+commit 2aa830ca0d4899cd4d34da1e01b1e8b01ad39740
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 13:04:18 2012 +0900
+
+    	1. modify cross epg build error
+
+commit d9de459e0f70a8d64be371ac241477718ce50978
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 12:30:07 2012 +0900
+
+    mgcamd model add
+
+commit 4e0b5ddd3919bd9dd16f4a152d3e1b22550b625d
+Author: fermi <perpect7@dags.kr>
+Date:   Tue Oct 9 12:26:21 2012 +0900
+
+    enigma2 hd skin modify
+
+commit 74ca380ff7f08f064d796b0ea75d800389ab288a
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 12:24:29 2012 +0900
+
+    	modified:   enigma2.bb
+
+commit aa0af19352df293f5b56138b55c7d029eab75e06
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 12:15:20 2012 +0900
+
+    	modified:   enigma2.bb
+
+commit 177e7b2a89afc7a20efbd7433c1ee3fd8c084439
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 11:50:41 2012 +0900
+
+    	modified:   enigma2.bb
+
+commit 0f6c18e18fd5e3214a5497bacc7f1ae5eb50a582
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 11:02:43 2012 +0900
+
+    	modified:   recipes/e2openplugins/enigma2-plugin-systemplugins-crossepg.bb
+
+commit e2bf17a95c165877686a539a4ce73b6a86dfc563
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Tue Oct 9 10:54:00 2012 +0900
+
+    	modified:   enigma2-plugin-extensions-openwebif.bb
+    	modified:   enigma2-plugin-systemplugins-crossepg.bb
+
+commit 726d673b5d4c93bb9db062e90566aaa983259dd5
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 23:03:09 2012 +0900
+
+    	new file:   ../../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/TWIN.jpg
+    	new file:   ../../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/base.py
+    	new file:   ../../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/info.py
+    	new file:   ../../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/twin.html
+    	new file:   ../../e2openplugins/enigma2-plugin-extensions-openwebif/tmsingle/twin.png
+    	new file:   ../../e2openplugins/enigma2-plugin-systemplugins-crossepg/tmsingle/crossepg_menu.py
+    	new file:   ../../e2openplugins/enigma2-plugin-systemplugins-crossepg/tmsingle/plugin.py
+    	new file:   tmsingle/dreamboxweb.png
+    	new file:   tmsingle/dreamboxwebtv.png
+    	new file:   tmsingle/enigma2_plugins_WebInterface.patch
+    	new file:   tmsingle/favicon.ico
+    	new file:   tmsingle/rc.png
+
+commit 5a9099b92a8c8be7903c2602f82d34bc61ef8011
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 22:56:23 2012 +0900
+
+    	modified:   enigma2.bb
+    	new file:   enigma2/tmsingle/CoolPico.pyo
+    	new file:   enigma2/tmsingle/arrowdown.png
+    	new file:   enigma2/tmsingle/arrowleft.png
+    	new file:   enigma2/tmsingle/arrowright.png
+    	new file:   enigma2/tmsingle/arrowup.png
+    	new file:   enigma2/tmsingle/dbus-daemon
+    	new file:   enigma2/tmsingle/def_ins
+    	new file:   enigma2/tmsingle/def_inst
+    	new file:   enigma2/tmsingle/enigma2.sh
+    	new file:   enigma2/tmsingle/enigma2_end.sh
+    	new file:   enigma2/tmsingle/enigma2_pre_start.sh
+    	new file:   enigma2/tmsingle/input_rcnew-configured.png
+    	new file:   enigma2/tmsingle/input_rcnew.png
+    	new file:   enigma2/tmsingle/input_rcold-configured.png
+    	new file:   enigma2/tmsingle/input_rcold.png
+    	new file:   enigma2/tmsingle/iq.conf
+    	new file:   enigma2/tmsingle/keycheck_pr
+    	new file:   enigma2/tmsingle/keymap.xml
+    	new file:   enigma2/tmsingle/mdev.conf
+    	new file:   enigma2/tmsingle/menu.xml
+    	new file:   enigma2/tmsingle/pli.conf
+    	new file:   enigma2/tmsingle/rc.png
+    	new file:   enigma2/tmsingle/rcold.png
+    	new file:   enigma2/tmsingle/rcpositions.xml
+    	new file:   enigma2/tmsingle/restore.sh
+    	new file:   enigma2/tmsingle/skin.xml
+    	new file:   enigma2/tmsingle/startwizard.xml
+    	new file:   enigma2/tmsingle/update_pr
+    	new file:   enigma2/tmsingle/var
+
+commit 3f9550c746e5a6a676e8f96857f9984c6df5965c
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 22:16:02 2012 +0900
+
+    	modified:   image.bbclass
+
+commit 14f8546f591211fca73184637a5709a8decb7905
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 21:39:20 2012 +0900
+
+    	new file:   linux-tm2toe-3.1.1/001_fix_standby_error_tm2toe.patch
+    	new file:   linux-tm2toe-3.1.1/tm2toe_defconfig
+    	new file:   linux-tm2toe_3.1.1.bb
+
+commit 1d09e7d4e4f68c3521cc5b8ecce553d1a6dbd688
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 20:54:52 2012 +0900
+
+    	modified:   linux-tmsingle_3.1.1.bb
+
+commit df80a6786dd63b1c9c97abdfda32312f521211c3
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 20:23:43 2012 +0900
+
+    	modified:   cfe.bin
+
+commit 4db991ef6a3e73f72267359d33154e4288dc115d
+Author: iqteam <iqteammaster@gmail.com>
+Date:   Mon Oct 8 14:04:57 2012 +0900
+
+    	new file:   tmsingle/cfe.bin
+    	new file:   tmsingle/splash.bmp
+
+commit 2ec6ceb55524353358a9468c4608cc2b3959c2f7
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Mon Oct 8 11:28:30 2012 +0900
+
+    	1. alsa path modify
+
+commit 64767742015a56e0f4daa85f8d260eb8f9c5a17c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Mon Oct 8 11:18:13 2012 +0900
+
+    	1. alsa packages url modify
+
+commit d5dafaa9b39a1c0c7c520a86c0806219f34e24eb
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Mon Oct 8 10:58:35 2012 +0900
+
+    	1. 2012.10.08 driver upload
+
+commit 8f525d221f52cc340c1764ceaedf7019e5de9229
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Mon Oct 8 10:57:33 2012 +0900
+
+    	1. tmsingle openpli build modify
+
+commit 46fb57d9b750fe34c9658093a4c5a6dd0cf5dac3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Oct 5 22:16:13 2012 +0900
+
+    	1. driver update.
+
+commit 56099d5b7d9afa26153c037100de85573a1e8820
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Oct 5 17:48:57 2012 +0900
+
+    	1. sysctl.conf speed improve.
+
+commit db688a76fc8258bd3d6dd4bb537baf6a546817e3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Oct 5 16:04:47 2012 +0900
+
+    	1. alsa packages url change
+
+commit 0fe0780a0ceef7a4e9eb769bad9d48c75c88482d
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Oct 5 14:41:21 2012 +0900
+
+    	1. remove keymapping UHF key.
+
+commit 2a32bf78124ed42403fd5d4b2dbb044bafcf1553
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Oct 5 11:58:17 2012 +0900
+
+    	1. nstreamvod default remove.
+
+commit bf837aa31d1d8123a031b85cfc5fd415f1f31009
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Oct 4 22:56:28 2012 +0900
+
+    	1. if ios300 supporting deepstandby that it has micom
+    	2. in standby menu, remove shutdown( only ios300 )
+    		because not support micom.
+
+commit bffa0688f9600c065d88bf2a4a7f666128985c19
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 18:41:09 2012 +0900
+
+    	1. default channel
+
+commit a8fe5c96162fcdf884d811fd65af6a2e9a4426e5
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 18:05:16 2012 +0900
+
+    	1. default channel
+
+commit 6c137976e941c753479ebfafc5d9db6e4eec1a88
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 17:50:13 2012 +0900
+
+    	1. default channel list
+
+commit 41263e174b06349ae695e7c81bdbd1ee255959ec
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 17:35:10 2012 +0900
+
+    	1. webinterface remove
+
+commit 1b178264fbd429179eb281a6a66a437ea8261caa
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 17:30:17 2012 +0900
+
+    	1. modify Wrong directory
+
+commit 46d73619b0296e3c7ca69bc196bd08e17d3f9215
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 17:01:26 2012 +0900
+
+    	1. mytube and graphic epg remove
+
+commit 902f2dd2d2cbf1b9ce46662d3b432c416d3ac281
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 16:30:21 2012 +0900
+
+    	1. crossepg plugin added
+
+commit de13b1468d2f7721ccfa715418d3182b6913389a
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 14:38:19 2012 +0900
+
+    	1. rcu model added.
+
+commit d9c4e7adffcad77abd5f34dede1754d26c1e3ece
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 14:08:17 2012 +0900
+
+    	1. modify mdev
+
+commit 8c5719c685181f6b973b447b68f191d6c544a66c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 12:08:07 2012 +0900
+
+    	1. hdd and usb mount
+
+commit 1e78667672ce5616ca21b23e6b38e64d229a751b
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 28 11:48:11 2012 +0900
+
+    	1. CoolTvguide pre install
+
+commit f2c91513f612c83f704746b2d640bfea490da106
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 18:28:08 2012 +0900
+
+    	1. Feed url modify
+
+commit 412e2431ce3d6513c5eb8061bacf40a5b505e91f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 17:32:02 2012 +0900
+
+    	1. URL Feed Modify
+
+commit 45eed1e1d93ae8a46379ba3c58b11a273422182a
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 17:02:02 2012 +0900
+
+    	1. openpli-enigma2-image script modify
+
+commit 4cbcbca42170472eecb3db6d309f2774d6a75e19
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 15:30:50 2012 +0900
+
+    	1. 3rd-party-feed-config.bb
+    	2. skin button remove
+
+commit 8d562e182b94398b3635b39625e7955b449047a0
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 15:15:11 2012 +0900
+
+    	1. 3rd feed add all
+
+commit 402d6fbea5841b15e4cb2fb166d384825b640c9b
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 11:47:37 2012 +0900
+
+    	1. openembedded distro url
+
+commit 80497b85fb9e84ea25b46bf497b8e783da4d820d
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 11:46:16 2012 +0900
+
+    	1. url feed
+
+commit 003f925b9b845ba6f1f7fe662fb80b48970ee881
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 27 11:43:59 2012 +0900
+
+    	1. driver divide to model.
+
+commit 97184118bab503eb6fe3cd536523a802c4c4a5a2
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 26 16:38:39 2012 +0900
+
+    	1. 2012.09.26 driver
+
+commit a46716d3e8ca6943354b06e184a4368f0e01de68
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 26 14:14:34 2012 +0900
+
+    	1. during stop enigma2 that aproach to half progress.
+
+commit 33afd9c61eba482d4e2db85b5afcaec4cb067c87
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 26 13:29:13 2012 +0900
+
+    	1. mdev.conf
+
+commit ec1977e0a71be8edfa48669df6e0a8dd0a61a899
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 26 11:14:15 2012 +0900
+
+    	1. rtmp package url modify.
+
+commit 4cf481028cbf9c563016eec403a021086710ac18
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 21:58:29 2012 +0900
+
+    	1. skin.xml file divide from by model.
+
+commit 7d4606743630f5d6689611fcfc1aa1a8b0424da9
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 21:22:59 2012 +0900
+
+    	1. 20120925 driver file upload
+
+commit 3c0c23ea888e13c1284d06f865ba3cd377a4aa2f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 21:08:45 2012 +0900
+
+    	1. ios200,ios300,tmtwin default.
+    	2. 1channel, cootvguide,
+
+commit d5f18bd8092d65781d5b698f4e61a16c87b74f24
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 19:16:52 2012 +0900
+
+    	1.mdev.conf
+
+commit c01f1595ca6fecf185240729f835d93fdb0a656f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 18:06:39 2012 +0900
+
+    	1. 1channel, cooltvguide
+
+commit cf10d96803cdf9125e5691a2a89fdd59408fd1d9
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 16:53:45 2012 +0900
+
+    	1. enigma2 deep standby and standby error code modify.
+
+commit 84ff08fc6380f9a0ce0f0b10fef2cd46b5abc10c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 15:57:52 2012 +0900
+
+    	1. model ios100,ios200,ios300,tm2toe
+
+commit fd97b4c01f8d4bdf5fa61558952ff8c0dabf4584
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 15:42:37 2012 +0900
+
+    	1. 1channel, cooltvguide
+
+commit f7748db3ce6f2043b891d9747b5d15b96997f8da
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 15:37:42 2012 +0900
+
+    	1. if not optional install, then error.
+
+commit ecf09fa133539e264b858e6fddbef4766349b72f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 15:08:01 2012 +0900
+
+    	1. modify install wrong path
+
+commit 2d1cd6efe6ee6e4a3092296100e4307950df0623
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 14:56:04 2012 +0900
+
+    	1. ios200 kernel patch.
+
+commit f7cacd7d0828d8f51c93539bfb0befd08330b453
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 14:24:19 2012 +0900
+
+    	1. enter web
+
+commit bd7d3216d3115c00b0af37daf49e3ef69c8cd42e
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 14:07:43 2012 +0900
+
+    	1. modify permission
+
+commit 5e06d90a4f2af30f5ee66e62db1bfe45b361ab2f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 13:29:41 2012 +0900
+
+    	1. lastest driver url modify.
+
+commit 05dedadfa9ec20fc83cf805321bf8420319dbb3f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 12:28:45 2012 +0900
+
+    	1. ios100, ios200, ios300, tm2toe bootloader upload.
+
+commit 42307b2d675c776a59eafd4a0cadcabe77d79cb0
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 12:03:20 2012 +0900
+
+    	1. 4doe/enigma2
+
+commit 022173bcd2cc165122bd3740c0cba9033500fefb
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 11:52:51 2012 +0900
+
+    	1. ios100, ios200, ios300, tm2toe added repository.
+
+commit fbb7332407945bf4dffef12e622087f857bde6c6
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Tue Sep 25 11:24:44 2012 +0900
+
+    	1. ios100
+    	2. ios200
+    	3. ios300
+    	4. tm2toe
+    	description : copy to directory by model name.
+
+commit bf47c25205d2d7d8ba9838843954d07a6e171a3c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 21:12:25 2012 +0900
+
+    	1. openweb
+
+commit 4b544e9798fbd7ddd4dafca29173fa0ff48f2e65
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 20:59:58 2012 +0900
+
+    	1. $ {D} to ${D}
+
+commit e11d6b2d4dfe0794d6afcf3eeda69e1204fc0f4c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 20:12:01 2012 +0900
+
+    	1. enigma2 menu
+
+commit 0c24ca932bb2c0abc9cb3f6d12d0305818af4816
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 20:05:13 2012 +0900
+
+    	1. rcu file
+
+commit 24eeebdcecd86b2327433e6918f4943925e4704c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 19:54:23 2012 +0900
+
+    	1. skin.xml and startwizard.xml
+
+commit 4578413b2966cad380b09975560b812cd2b693d5
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Fri Sep 21 19:42:52 2012 +0900
+
+    	1. enigma2 start arrow size change.
+    	2. skin
+    	3. factory reset ( full factory reset , factory reset )
+    	4. cam config modify
+
+commit c25a44d57755b159bb7d261bde1e9e62d24120cc
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 20:34:29 2012 +0900
+
+    	1.mgcamd-config
+    	2.newcs-config
+
+commit f620c13765434246094797560cebca643871834b
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 17:27:27 2012 +0900
+
+    	1. mgcamd1.30d install and config
+
+commit 79006880a0ec0a22dba2db9a3efdbe01557ba523
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 12:29:35 2012 +0900
+
+    	1. gdata
+
+commit 018034c0c1423ac9e78986dfe841899ef680c90b
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 11:53:13 2012 +0900
+
+    	1. softcam-2.21 stable version install
+
+commit cd4ccb0cc17f817bf3301efb2045517b13ca6a91
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 11:26:50 2012 +0900
+
+    	1. install image for enigma2
+    	2. newcs cam install
+
+commit e95b79c092fde33f516c4343afe50ded3cfe7912
+Merge: 655ce04 69150f3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 05:06:25 2012 +0900
+
+    Merge branch 'master' of https://github.com/4doe/openembedded
+
+commit 655ce045c445aae395e0927dfe6c10c05ebbf674
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 05:05:40 2012 +0900
+
+    	1. cccam 2.30
+    	2. cfg file install.
+
+commit 69150f3bb968924272e85c855cd3aa45f896c868
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 05:04:23 2012 +0900
+
+    	1. 2.30
+
+commit e3e84cc8f23cd644a11d12d3f2eb3081b5d99b77
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 04:16:27 2012 +0900
+
+    	1. cccam209
+    	2. cccam221
+
+commit 96670c5b8b783e3fff4823bc4faed833a379ce79
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 04:13:03 2012 +0900
+
+    	1. cccam-config
+
+commit 2c676b63b40bec5c65610286b9584ad1e45d172c
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Thu Sep 20 04:11:25 2012 +0900
+
+    	1. cccam config
+
+commit 22e4e23a213c5379cf9f3d0f7e3fcf872b44ff9f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 23:14:43 2012 +0900
+
+    	1. CCcam.cfg
+
+commit 7edeb6559b34480cc94904dd6901a1e85de901e5
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 22:55:25 2012 +0900
+
+    	1. cccam-config default install.
+
+commit 4397503db9e17c05baf94e3fb7f9a329dc4c3e51
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 21:02:34 2012 +0900
+
+    	1. cccam-config.bb
+
+commit 87174bc41726b496df88fd42e67411ce57c8d22b
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 20:07:39 2012 +0900
+
+    	1. bootlogo
+    	2. bootloader
+
+commit 13f24eb8c2611d8800929f2e069117d621239113
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 19:52:24 2012 +0900
+
+    	1. pyton gdata
+
+commit 1a805509b00f1205f440bd4ca6d715a09a383a9e
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 19:49:17 2012 +0900
+
+    	1. mytube
+
+commit 4971999340f9c08a8ef47b087b5e699258e36836
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 17:46:37 2012 +0900
+
+    	1. mytube modify.
+
+commit 640ba3b9d0d13585729591b556053ca7a2766391
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 17:25:08 2012 +0900
+
+    	1. mytube
+
+commit 23506602eddf00835e8040ec5353d4488768f153
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 17:01:20 2012 +0900
+
+    	1. openpli-enigma-image.bb
+
+commit 6a82997c52af55f18590156c4c3996f841fefca9
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 16:58:22 2012 +0900
+
+    	1. mytube
+
+commit 036a9b964ffccc87c9900677dde5cf5fa79fb32a
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 16:52:51 2012 +0900
+
+    	1. enigma2-pliplugins.bb
+
+commit 2929525208d44b2daf0cf9e6d366aa01f9db7e15
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 15:48:00 2012 +0900
+
+    	1. tmxxe.inc
+
+commit ad4227939b102b98b01e0321fa5fbe224f0b71e1
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 15:42:32 2012 +0900
+
+    	1. cfe.bin
+    	2. splash.bmp
+
+commit c05f798d18017b5089ddeb2e9ffa74e0b92ec187
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 15:41:08 2012 +0900
+
+    	1. cfe.bin
+
+commit b438797f995c4e13a4d1e3800c1e8e1b243124a3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 15:17:32 2012 +0900
+
+    	1. cfe.bin
+    	2. splash.bmp
+
+commit fb6a7826765024d6757ad6e07eec5e67f1c4d7e6
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 15:00:18 2012 +0900
+
+    	1. tmtwin
+
+commit bb02f8eae2efdd1806679a6b57cd4adbee7c08a3
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 14:42:20 2012 +0900
+
+    	1. distro path modify
+
+commit e7213dd0f39aac7e89ba3f999ac673d63b468178
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 14:30:18 2012 +0900
+
+    	1. enigma2 default feed.
+
+commit e8f622615d1dad84f3609ee76b4fb4045c8345fb
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 14:15:44 2012 +0900
+
+    	1. TMTWIN distro url change to openpli server.
+
+commit c0d2e2c7c4be0113b2ed274fa3aa40fd558e453f
+Author: fermi <fermi@fermi-FX61-0NC.(none)>
+Date:   Wed Sep 19 13:55:27 2012 +0900
+
+    	1. enigma2 build source update.
+    	2. technomate Driver version update 2012.09.18
+    	3. 3.1.1 kernel update
+    	4. error module delete named by "linux-libc-headers-2.6.30"
+
+commit 64b71311646a20456f941eeb390709c40b04de29
+Author: fermi <kamase79@daum.net>
+Date:   Tue Sep 4 20:04:20 2012 +0900
+
+    tmtwin path added.
+
+commit 76de92a305afae1a05a7003ac3dde011defc6cd9
+Author: fermi <kamase79@daum.net>
+Date:   Tue Sep 4 19:59:50 2012 +0900
+
+    zip path modify
+    	1. update/tmtwin/cfe/XXXXX
+
+commit d72fba06c74a6e82ca217c5c608186c48418fae6
+Author: fermi <kamase79@daum.net>
+Date:   Tue Sep 4 19:58:53 2012 +0900
+
+    distro feed modify.
+    	1. tmtwin
+    	2. all
+    	3. mipsel
+
+commit 93308d3521aa6de894df9e078356975494d66615
+Author: fermi <kamase79@daum.net>
+Date:   Tue Sep 4 19:57:56 2012 +0900
+
+    tmtwin server path.
+
+commit 18df65237a4f4eec4cd063e220a7f6427c466f66
+Author: fermi <kamase79@daum.net>
+Date:   Tue Sep 4 17:05:22 2012 +0900
+
+    enigma2 plugins remove mytube
+
+commit 8a0648da243f598273895200c03d13badedfb6d8
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 19:11:33 2012 +0900
+
+    modify
+
+commit f9fc2b1c918b3f951f218346ae3e8eeb32692843
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 19:05:07 2012 +0900
+
+    shoutcast plugins added
+
+commit 0f647d1b5f614efb77cfcacbb6b3840ac83fc275
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 18:34:06 2012 +0900
+
+    cooltv guide remove
+
+commit de49ab08d1bba7eeb56d4dc062093307223425b6
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 17:42:47 2012 +0900
+
+    plugin added
+    	#@ 1. cooltvguid
+    	#@ 2. mytube
+
+commit c87b4a2bcbb6447d377ca49ff75dba5cdd610e31
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 16:59:18 2012 +0900
+
+    enigma2 source path modify
+
+commit 71d1b95b6ff14e86082b2edd02eda07cb5936a0a
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 12:15:40 2012 +0900
+
+    1channel default install for image
+
+commit de97435aefffe55a8188edb79850178f770b2505
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 11:53:06 2012 +0900
+
+    modify enigma2 path
+
+commit 78d3b69233f91d269b25c7d2a17142829e86fb5d
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 11:49:55 2012 +0900
+
+    github enigma2 modify
+
+commit 3b0e50af9bcf0cf102a731ac128d9686f178fd2f
+Author: fermi <kamase79@daum.net>
+Date:   Mon Sep 3 11:42:14 2012 +0900
+
+    enigma2 url modify
+
+commit 6b645d035958d6ce7df85614afdccd37c2c28f18
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 17:13:26 2012 +0900
+
+    default ubi volume 4
+
+commit 8ee1ef88a9841694c59495a9aadb3ac61a003a99
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 17:02:37 2012 +0900
+
+    enigma2 plugins added all.
+
+commit b5bcb35b685526699183e6b240becb00af9e49d4
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 17:00:57 2012 +0900
+
+    added ppanel default install for enigma2
+
+commit 48ad644895f4815511ba801616b3d695ba3563f5
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 16:06:31 2012 +0900
+
+    enigma2 path modify
+
+commit 8f0923701d92b5320dfe56521a142c616d66730d
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 15:56:09 2012 +0900
+
+    webinterface plugins modified.
+
+commit 26cce2914ae033a206ba47ba82c8f5c58bead74c
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 15:44:37 2012 +0900
+
+    tmxxe.inc modify
+
+commit c727a04ebf5f4dc83da2dbadd09183a7d445fabd
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 15:39:39 2012 +0900
+
+    rcposition modify
+
+commit 89dc30144a8cd27be564b33aaf2b070569b86370
+Author: fermi <kamase79@daum.net>
+Date:   Fri Aug 31 15:34:03 2012 +0900
+
+    image kernel module copy to rootfs
+
+commit fc8880ff56d79925d5a733bf48d6e9c03a8ac600
+Author: fermi <kamase79@daum.net>
+Date:   Thu Aug 30 16:02:02 2012 +0900
+
+    modify tmtwin model picture
+
+commit 5e0a7478075849f1d0e6358c9c0a95c67d81283a
+Author: fermi <kamase79@daum.net>
+Date:   Thu Aug 30 15:21:41 2012 +0900
+
+    modules update
+
+commit 8afa643fc1992eda9c8bd275d9383992dffa251a
+Author: fermi <kamase79@daum.net>
+Date:   Thu Aug 30 11:38:38 2012 +0900
+
+    bootloader update.
+
+commit 0351e19cf4546fbb98c80419dbe8545c417cba98
+Author: fermi <kamase79@daum.net>
+Date:   Thu Aug 30 11:25:44 2012 +0900
+
+    kernel and driver modify.
+
+commit 753de5116fbbf8f48008df6b0b5ffe570ad1023b
+Author: fermi <kamase79@daum.net>
+Date:   Tue Aug 28 17:45:12 2012 +0900
+
+    tmtwin for bootimage, bootloader copy path modify.
+
+commit a2a6f30ed7efce8ad48a9618ef937590bfff2b02
+Author: fermi <kamase79@daum.net>
+Date:   Tue Aug 28 16:38:37 2012 +0900
+
+    recipes packages modify.
+
+commit 71dcb2ae02c12e0b4155aaeafead5b1faa3b2c7e
+Author: fermi <kamase79@daum.net>
+Date:   Tue Aug 28 12:24:11 2012 +0900
+
+    base module install modify
+
+commit ff4985bb1fdfd2b34d0f4a3cb167e7082c014d95
+Author: fermi <kamase79@daum.net>
+Date:   Tue Aug 28 12:10:50 2012 +0900
+
+    tmtwin model build added
+
+commit db98a8156c13f18381c6e5ec37745d6645534f3e
+Author: fermi <kamase79@daum.net>
+Date:   Tue Aug 28 12:04:02 2012 +0900
+
+    first commit for openpli 4d
