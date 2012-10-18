@@ -71,8 +71,8 @@
 		<button name="OK" pos="74,262" />
 		<button name="UP" pos="76,235" />
 		<button name="DOWN" pos="76,289" />
-		<button name="LEFT" pos="40,400" />
-		<button name="RIGHT" pos="108,400" />
+		<button name="LEFT" pos="47,255" />
+		<button name="RIGHT" pos="103,255" />
 		<button name="AUDIO" pos="76,205" />
 		<button name="VIDEO" pos="43,148" />
 		<button name="RED" pos="54,480" />
