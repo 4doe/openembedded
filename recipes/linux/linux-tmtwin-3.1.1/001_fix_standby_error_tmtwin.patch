@@ -33,7 +33,7 @@
 +	}
 +
 +}
-+#if 0 //@ NOTE :TM_PATCH
++#if 1 //@ NOTE :TM_PATCH
 +static void fixme_micom_send_data(const u8 *data, u8 count)
 +{
 +	/* only need for tmtwin micom */
