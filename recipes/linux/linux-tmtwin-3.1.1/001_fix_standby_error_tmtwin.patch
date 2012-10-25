@@ -53,7 +53,7 @@
 +	u8 micom_standby[3] = { 0x7f, 0x1, 0x40 };
 +
 +	/* set micom to get power key */
-+	//@ NOTE : fixme_micom_send_data(micom_init_seq, 9); 
++	fixme_micom_send_data(micom_init_seq, 9); 
 +
 +	/* micom power off */
 +	micom_send_data(micom_standby, 3);
