@@ -6,7 +6,7 @@ LICENSE = "proprietary"
 KV = "3.1.1"
 PV = "${KV}"
 
-SRCDATE = "20121025"
+SRCDATE = "20121026"
 
 RDEPENDS = "kernel (${KV})" 
 RDEPENDS += "technomate-bootloader"
