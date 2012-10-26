@@ -33,7 +33,7 @@
 +	}
 +
 +}
-+#if 0 //@ NOTE :TM_PATCH
++#if 1 //@ NOTE :TM_PATCH
 +static void fixme_micom_send_data(const u8 *data, u8 count)
 +{
 +	/* only need for tmtwin micom */
@@ -47,13 +47,13 @@
 +	   Enable this key to get on standby */
 +
 +	//@ NOTE :
-+#if 0
-+	u8 micom_init_seq[9] = { 0x7f, 0x7, 0x10, 0x84, 0x72, 0x1, 0x4, 0x4, 0x0a };
++#if 1
++	u8 micom_init_seq[9] = { 0x7f, 0x7, 0x10, 0x84, 0x71, 0x1, 0x4, 0x4, 0x0a };
 +#endif
 +	u8 micom_standby[3] = { 0x7f, 0x1, 0x40 };
 +
 +	/* set micom to get power key */
-+	//@ NOTE : fixme_micom_send_data(micom_init_seq, 9); 
++	fixme_micom_send_data(micom_init_seq, 9); 
 +
 +	/* micom power off */
 +	micom_send_data(micom_standby, 3);
