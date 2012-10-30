@@ -6,6 +6,9 @@ LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=4fbd65380cdd255951079008b364516c"
 
 DEPENDS += "libxml2 zlib python python-native"
 
+# it sometime fails to build in parallel
+PARALLEL_MAKE = ""
+
 inherit gitpkgv
 SRCREV = ""
 PV = "0.6.2+git${SRCPV}"
