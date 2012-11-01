@@ -68,7 +68,9 @@ do
 	if [ "$PROGRESS" = yes ]; then
 		export PROGRESS_value=`expr $PROGRESS_value + $PROGRESS_incstep`
 #		echo "$PROGRESS_value Starting $i..." >/proc/progress
-		echo "$PROGRESS_value" >/proc/progress
+		if [ -e /proc/progress ]; then
+			echo "$PROGRESS_value" >/proc/progress
+		fi
 	fi
 
 	case "$i" in
