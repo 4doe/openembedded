@@ -9,6 +9,11 @@ SRC_URI_append_tmtwin = " \
 					file://CCcam.xml \
 					file://PPanel_tutorial.xml \
 						 "
+SRC_URI_append_tmtwinoe = " \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
+						 "
+
 
 SRC_URI_append_ios100 = " \
 					file://CCcam.xml \
@@ -35,6 +40,12 @@ SRC_URI_append_tmsingle = " \
 						 "
 
 do_install_append_tmtwin(){
+		install -d ${D}/etc/ppanels
+		install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
+		install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
+}
+
+do_install_append_tmtwinoe(){
 		install -d ${D}/etc/ppanels
 		install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 		install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/

@@ -15,6 +15,9 @@ SRC_URI = "git://github.com/littlesat/skin-PLiHD.git;protocol=git"
 SRC_URI_append_tmtwin = " \
 						 file://skin.xml \
 						 "
+SRC_URI_append_tmtwinoe = " \
+						 file://skin.xml \
+						 "
 SRC_URI_append_ios100 = " \
 						 file://skin.xml \
 						 "
@@ -44,6 +47,13 @@ do_compile() {
 }
 
 do_install_append_tmtwin() {
+	install -d ${D}/usr/share
+	install -d ${D}/usr/share/enigma2/PLi-HD/
+	cp -rp ${S}/usr/share/* ${D}/usr/share/
+	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
+}
+do_install_append_tmtwinoe() {
 	install -d ${D}/usr/share
 	install -d ${D}/usr/share/enigma2/PLi-HD/
 	cp -rp ${S}/usr/share/* ${D}/usr/share/

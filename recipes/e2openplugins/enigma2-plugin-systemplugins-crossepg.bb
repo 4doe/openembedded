@@ -23,6 +23,11 @@ SRC_URI_append_tmtwin = " \
 						file://crossepg_menu.py \
 						file://plugin.py \
 						 "
+SRC_URI_append_tmtwinoe = " \
+						file://crossepg_menu.py \
+						file://plugin.py \
+						 "
+
 SRC_URI_append_tm2toe = " \
 						file://crossepg_menu.py \ 
 						file://plugin.py \
@@ -64,6 +69,11 @@ do_compile() {
 #}
 
 do_install_append_tmtwin() {
+	oe_runmake 'D=${D}' install
+	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
+	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/
+}
+do_install_append_tmtwinoe() {
 	oe_runmake 'D=${D}' install
 	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
 	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/

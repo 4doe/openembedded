@@ -11,6 +11,11 @@ do_compile() {
 		for feed in ${FEEDS}; do
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_openembedded}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf
 		done
+	elif [ "${MACHINE}" == "tmtwinoe" ];then
+		for feed in ${FEEDS} ; do
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf
+		done
+
 	elif [ "${MACHINE}" == "tm2toe" ];then
 		for feed in ${FEEDS} ; do
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf

@@ -20,6 +20,14 @@ SRC_URI_append_tmtwin = " \
 						 file://twin.jpg \
 						 file://twin.png \
 						 "
+SRC_URI_append_tmtwinoe = " \
+						 file://base.py \
+						 file://info.py \
+						 file://twin.html \
+						 file://twin.jpg \
+						 file://twin.png \
+						 "
+
 
 SRC_URI_append_tm2toe = " \
 						 file://base.py \
@@ -70,6 +78,15 @@ PLUGINPATH = "/usr/lib/enigma2/python/Plugins/Extensions/${MODULE}"
 #	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 #}
 do_install_append_tmtwin () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/twin.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/twin.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/twin.html ${D}${PLUGINPATH}/public/static/remotes/
+}
+do_install_append_tmtwinoe () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
