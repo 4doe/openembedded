@@ -135,6 +135,7 @@ SRC_URI_append_tmtwin = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 SRC_URI_append_tmtwinoe = " \
  						file://arrowdown.png \
@@ -173,6 +174,7 @@ SRC_URI_append_tmtwinoe = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 SRC_URI_append_tm2toe = " \
  						file://arrowdown.png \
@@ -203,6 +205,7 @@ SRC_URI_append_tm2toe = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 
 SRC_URI_append_tmsingle = " \
@@ -234,6 +237,7 @@ SRC_URI_append_tmsingle = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 
 SRC_URI_append_ios100 = " \
@@ -273,6 +277,7 @@ SRC_URI_append_ios100 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 SRC_URI_append_ios200 = " \
  						file://arrowdown.png \
@@ -311,6 +316,7 @@ SRC_URI_append_ios200 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 SRC_URI_append_ios300 = " \
  						file://arrowdown.png \
@@ -349,6 +355,7 @@ SRC_URI_append_ios300 = " \
 						file://def_ins \
 						file://CCcam.xml \
 						file://PPanel_tutorial.xml \
+						file://profile \
 "
 
 
@@ -449,6 +456,7 @@ do_install_append_tmtwin(){
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -492,12 +500,14 @@ do_install_append_tmtwin(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 do_install_append_tmtwinoe(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
@@ -541,11 +551,13 @@ do_install_append_tmtwinoe(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 do_install_append_tm2toe(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/ppanels/
 	install -d 0755 ${D}/home/http/cgi-bin/
@@ -582,6 +594,7 @@ do_install_append_tm2toe(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 do_install_append_tmsingle(){
 	install -d 0755 ${D}/usr/bin/
@@ -589,6 +602,7 @@ do_install_append_tmsingle(){
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
@@ -623,6 +637,7 @@ do_install_append_tmsingle(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
@@ -630,6 +645,7 @@ do_install_append_ios100(){
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
@@ -672,6 +688,7 @@ do_install_append_ios100(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 
 do_install_append_ios200(){
@@ -680,6 +697,7 @@ do_install_append_ios200(){
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
@@ -722,6 +740,7 @@ do_install_append_ios200(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 do_install_append_ios300(){
 	install -d 0755 ${D}/usr/bin/
@@ -729,6 +748,7 @@ do_install_append_ios300(){
 	install -d 0755 ${D}/var/
 	install -d 0755 ${D}/etc/tuxbox/
 	install -d 0755 ${D}/etc/ppanels/
+	install -d 0755 ${D}/etc/enigma2/
 	install -d 0755 ${D}/home/http/cgi-bin/
 	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
 	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
@@ -771,6 +791,7 @@ do_install_append_ios300(){
 	cp ${WORKDIR}/var ${D}/etc/var.tar
 	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
 
 python populate_packages_prepend () {
