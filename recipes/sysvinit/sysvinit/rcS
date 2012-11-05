@@ -47,7 +47,7 @@ if [ "$VERBOSE" = no ]; then
         set `ls -1 /etc/rc$runlevel.d/S* | wc`
         numscripts=$1
 #        PROGRESS_incstep=`expr 90 / $1`
-        PROGRESS_incstep=`expr 50 / $1`
+        PROGRESS_incstep=`expr 45 / $1`
         PROGRESS_value=10
         PROGRESS=yes
         export PROGRESS_value PROGRESS_incstep
@@ -91,14 +91,14 @@ do
         #
         # Report status based on result code
         #
-        result=$?
-        if [ "$PROGRESS" = yes ]; then
-                if [ "$result" = 0 ]; then
-                    echo "=s" >/proc/progress
-                else
-                    echo "=f" >/proc/progress
-                fi
-        fi
+#        result=$?
+#        if [ "$PROGRESS" = yes ]; then
+#                if [ "$result" = 0 ]; then
+#                    echo "=s" >/proc/progress
+#                else
+#                    echo "=f" >/proc/progress
+#                fi
+#        fi
 done
 
 #
@@ -115,3 +115,6 @@ then
   /sbin/setup.sh
 fi
 
+if [ ! -e /etc/enigma2/profile ]; then
+  cp /etc/enigma2.profile /etc/enigma2/profile
+fi
