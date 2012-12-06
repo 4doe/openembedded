@@ -23,9 +23,9 @@ SRC_URI_append_tmtwin = " \
 SRC_URI_append_tmtwinoe = " \
 						 file://base.py \
 						 file://info.py \
-						 file://twin.html \
-						 file://twin.jpg \
-						 file://twin.png \
+						 file://twinoe.html \
+						 file://twinoe.jpg \
+						 file://twinoe.png \
 						 "
 
 
@@ -91,9 +91,9 @@ do_install_append_tmtwinoe () {
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
 	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
 	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
-	cp -rp ${WORKDIR}/twin.jpg ${D}${PLUGINPATH}/public/images/boxes/
-	cp -rp ${WORKDIR}/twin.png ${D}${PLUGINPATH}/public/images/remotes/
-	cp -rp ${WORKDIR}/twin.html ${D}${PLUGINPATH}/public/static/remotes/
+	cp -rp ${WORKDIR}/twinoe.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/twinoe.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/twinoe.html ${D}${PLUGINPATH}/public/static/remotes/
 }
 do_install_append_tm2toe () {
 	install -d ${D}${PLUGINPATH}
