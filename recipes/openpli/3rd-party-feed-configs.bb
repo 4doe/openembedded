@@ -36,6 +36,10 @@ do_compile() {
 		for feed in ${FEEDS}; do
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf
 		done
+	elif [ "${MACHINE}" == "tmsingle1" ];then
+		for feed in ${FEEDS}; do
+	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf
+		done
 	else
 	    for feed in ${FEEDS}; do
     	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/${feed}" > ${S}${sysconfdir}/opkg/${feed}-feed.conf
