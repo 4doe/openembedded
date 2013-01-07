@@ -239,7 +239,7 @@ SRC_URI_append_tmsingle = " \
 						file://PPanel_tutorial.xml \
 						file://profile \
 "
-SRC_URI_append_tmsingle1 = " \
+SRC_URI_append_tmsinglemini = " \
  						file://arrowdown.png \
 						file://arrowleft.png \
 						file://arrowright.png \
@@ -671,7 +671,7 @@ do_install_append_tmsingle(){
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
 	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
-do_install_append_tmsingle1(){
+do_install_append_tmsinglemini(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
 	install -d 0755 ${D}/var/
