@@ -65,7 +65,7 @@ SRC_URI_append_tmsingle = " \
 			file://priority.list \
 			file://replace.list \
 "
-SRC_URI_append_tmsingle1 = " \ 
+SRC_URI_append_tmsinglemini= " \ 
 			file://ignore.list \
 			file://mg_cfg \
 			file://newcamd.list \
@@ -243,7 +243,7 @@ do_install_append_tmsingle(){
 	install -m 0644 ${S}/replace.list ${D}/usr/keys/replace.list
 
 }
-do_install_append_tmsingle1(){
+do_install_append_tmsinglemini(){
 	install -d ${D}/usr/bin
 	install -m 0755 ${S}/mgcamd.mips ${D}/usr/bin/mgcamd
 	install -d ${D}/etc/tuxbox/config
