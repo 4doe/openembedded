@@ -44,7 +44,7 @@ do_install() {
     done
 	if [ "${MACHINE}" == tmsingle ];then
 		echo "bcmlinuxdvb _hwtype=\$hwtypenum" > ${D}/${sysconfdir}/modutils/_vuplus
-	elif [ "${MACHINE}" == tmsingle1 ];then
+	elif [ "${MACHINE}" == tmsinglemini ];then
 		echo "bcmlinuxdvb _hwtype=\$hwtypenum" > ${D}/${sysconfdir}/modutils/_vuplus
 	elif [ "${MACHINE}" == ios300 ];then
 		echo "bcmlinuxdvb _hwtype=\$hwtypenum" > ${D}/${sysconfdir}/modutils/_vuplus
