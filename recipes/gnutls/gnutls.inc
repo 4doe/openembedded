@@ -4,7 +4,8 @@ DEPENDS = "zlib libgcrypt lzo guile-native gtk-doc"
 LICENSE = "LGPL"
 LICENSE_${PN}-extra = "GPLv3"
 
-SRC_URI = "ftp://ftp.gnutls.org/pub/gnutls/gnutls-${PV}.tar.bz2;name=gnutls"
+#SRC_URI = "ftp://ftp.gnutls.org/pub/gnutls/gnutls-${PV}.tar.bz2;name=gnutls"
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/gnutls-${PV}.tar.bz2;name=gnutls"
 
 inherit autotools binconfig pkgconfig gettext
 
