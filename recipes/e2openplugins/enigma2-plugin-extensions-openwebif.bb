@@ -43,6 +43,14 @@ SRC_URI_append_tmsingle = " \
 						 file://single.jpg \
 						 file://single.png \
 						 "
+SRC_URI_append_tmsingle1 = " \
+						 file://base.py \
+						 file://info.py \
+						 file://single1.html \
+						 file://single1.jpg \
+						 file://single1.png \
+						 "
+
 SRC_URI_append_ios100 = " \
 						file://base.py \
 						file://info.py \
@@ -113,6 +121,16 @@ do_install_append_tmsingle () {
 	cp -rp ${WORKDIR}/single.png ${D}${PLUGINPATH}/public/images/remotes/
 	cp -rp ${WORKDIR}/single.html ${D}${PLUGINPATH}/public/static/remotes/
 }
+do_install_append_tmsingle1 () {
+	install -d ${D}${PLUGINPATH}
+	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}
+	cp -rp ${WORKDIR}/base.py ${D}${PLUGINPATH}/controllers/
+	cp -rp ${WORKDIR}/info.py ${D}${PLUGINPATH}/controllers/models/
+	cp -rp ${WORKDIR}/single1.jpg ${D}${PLUGINPATH}/public/images/boxes/
+	cp -rp ${WORKDIR}/single1.png ${D}${PLUGINPATH}/public/images/remotes/
+	cp -rp ${WORKDIR}/single1.html ${D}${PLUGINPATH}/public/static/remotes/
+}
+
 do_install_append_ios100 () {
 	install -d ${D}${PLUGINPATH}
 	cp -rp ${S}/plugin/* ${D}${PLUGINPATH}

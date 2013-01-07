@@ -38,6 +38,11 @@ SRC_URI_append_tmsingle = " \
 					file://CCcam.xml \
 					file://PPanel_tutorial.xml \
 						 "
+SRC_URI_append_tmsingle1 = " \
+					file://CCcam.xml \
+					file://PPanel_tutorial.xml \
+						 "
+
 
 do_install_append_tmtwin(){
 		install -d ${D}/etc/ppanels
@@ -79,5 +84,11 @@ do_install_append_tmsingle(){
 		install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
 		install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
 }
+do_install_append_tmsingle1(){
+		install -d ${D}/etc/ppanels
+		install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
+		install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
+}
+
 
 require assume-gplv2.inc
