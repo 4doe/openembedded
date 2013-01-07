@@ -239,6 +239,38 @@ SRC_URI_append_tmsingle = " \
 						file://PPanel_tutorial.xml \
 						file://profile \
 "
+SRC_URI_append_tmsingle1 = " \
+ 						file://arrowdown.png \
+						file://arrowleft.png \
+						file://arrowright.png \
+						file://arrowup.png \
+						file://keymap.xml \
+						file://rcold.png \
+						file://rc.png \
+						file://rcpositions.xml \
+						file://enigma2_end.sh \
+						file://enigma2_pre_start.sh \
+						file://enigma2.sh \
+						file://keycheck_pr \
+						file://restore.sh \
+						file://update_pr \
+						file://var \
+						file://skin.xml \
+						file://startwizard.xml \
+						file://input_rcnew.png \
+						file://input_rcnew-configured.png \
+						file://input_rcold.png \
+						file://input_rcold-configured.png \
+						file://menu.xml \
+						file://iq.conf \
+						file://pli.conf \
+						file://CoolPico.pyo \
+						file://def_ins \
+						file://CCcam.xml \
+						file://PPanel_tutorial.xml \
+						file://profile \
+"
+
 
 SRC_URI_append_ios100 = " \
  						file://arrowdown.png \
@@ -639,6 +671,50 @@ do_install_append_tmsingle(){
 	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
 	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
 }
+do_install_append_tmsingle1(){
+	install -d 0755 ${D}/usr/bin/
+	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/var/
+	install -d 0755 ${D}/etc/tuxbox/
+	install -d 0755 ${D}/etc/ppanels/
+	install -d 0755 ${D}/etc/enigma2/
+	install -d 0755 ${D}/home/http/cgi-bin/
+	install -d 0755 ${D}/usr/share/enigma2/skin_default/icons/
+	install -d 0755 ${D}/usr/lib/enigma2/python/Components/Renderer/
+	install -m 0755 ${WORKDIR}/rc.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/rcold.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowdown.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowup.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowright.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/arrowleft.png ${D}/usr/share/enigma2/skin_default/
+	install -m 0755 ${WORKDIR}/keymap.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/rcpositions.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/keycheck_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/restore.sh ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/update_pr ${D}/usr/bin/
+	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/startwizard.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/input_rcnew.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcnew-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/input_rcold-configured.png ${D}/usr/share/enigma2/skin_default/icons/
+	install -m 0755 ${WORKDIR}/menu.xml ${D}/usr/share/enigma2/
+	install -m 0755 ${WORKDIR}/CoolPico.pyo ${D}/usr/lib/enigma2/python/Components/Renderer/
+	install -m 0755 ${WORKDIR}/CCcam.xml ${D}/etc/ppanels/
+	install -m 0755 ${WORKDIR}/PPanel_tutorial.xml ${D}/etc/ppanels/
+	tar xf ${WORKDIR}/def_ins -C ${WORKDIR}/
+	mv ${WORKDIR}/def_inst ${D}/etc/.def_inst 
+	ln -s /usr/bin/opkg ${D}/usr/bin/ipkg
+	ln -s /etc/tuxbox ${D}/var/tuxbox
+	cp ${WORKDIR}/var ${D}/etc/var.tar
+	cp ${WORKDIR}/iq.conf ${D}/etc/.iq.conf.tar.bz
+	cp ${WORKDIR}/pli.conf ${D}/etc/.pli.conf.tar.gz
+	cp ${WORKDIR}/profile ${D}/etc/enigma2.profile
+}
+
 do_install_append_ios100(){
 	install -d 0755 ${D}/usr/bin/
 	install -d 0755 ${D}/etc/
