@@ -24,7 +24,7 @@ do_compile() {
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
-	elif [ "${MACHINE}" == "tmsingle1" ];then
+	elif [ "${MACHINE}" == "tmsinglemini" ];then
 		for feed in all ${TARGET_ARCH} ${PACKAGE_EXTRA_ARCHS} ${MACHINE}; do
 	    	    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI_Openembedded}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
 		done
