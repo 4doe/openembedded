@@ -5,7 +5,8 @@ S = "${WORKDIR}/mpfr-${PV}"
 NATIVE_INSTALL_WORKS = "1"
 PR = "${INC_PR}.1"
 
-SRC_URI = "http://www.mpfr.org/mpfr-${PV}/mpfr-${PV}.tar.bz2 \
+#SRC_URI = "http://www.mpfr.org/mpfr-${PV}/mpfr-${PV}.tar.bz2 \
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/mpfr-${PV}.tar.bz2 \
            file://p4.patch"
 
 # fix build in thumb mode for armv4t
