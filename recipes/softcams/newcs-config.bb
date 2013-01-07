@@ -4,7 +4,8 @@ PN = "enigma2-plugin-softcams-newcs-config"
 PV = "1.67"
 PR = "r0"
 
-SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/newcs-config-${PV}.tar.gz"
+#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/newcs-config-${PV}.tar.gz"
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/newcs-config-${PV}.tar.gz"
 
 S = "${WORKDIR}"
 

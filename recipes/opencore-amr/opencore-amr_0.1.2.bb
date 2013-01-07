@@ -4,7 +4,8 @@ LICENSE="Apache License, Version 2.0"
 PR = "r0"
 
 #SRC_URI = "${SOURCEFORGE_MIRROR}/${PN}/${PN}-${PV}.tar.gz"
-SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/${PN}-${PV}.tar.gz"
+#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/${PN}-${PV}.tar.gz"
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/${PN}-${PV}.tar.gz"
 S = "${WORKDIR}/${PN}-${PV}"
 
 inherit autotools

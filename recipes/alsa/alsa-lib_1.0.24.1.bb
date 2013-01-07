@@ -10,7 +10,8 @@ LICENSE = "LGPLv2.1"
 ARM_INSTRUCTION_SET = "arm"
 
 #SRC_URI = "ftp://ftp.alsa-project.org/pub/lib/alsa-lib-${PV}.tar.bz2 \
-SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/alsa-lib-${PV}.tar.bz2 \
+#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/alsa-lib-${PV}.tar.bz2 \
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/alsa-lib-${PV}.tar.bz2 \
            file://fix-tstamp-declaration.patch \
            file://fix_libmath.patch \
 	  "

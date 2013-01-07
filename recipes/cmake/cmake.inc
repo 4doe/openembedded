@@ -9,7 +9,8 @@ INC_PR = "r2"
 
 CMAKE_MAJOR_VERSION = "${@bb.data.getVar('PV',d,1).split('.')[0]}.${@bb.data.getVar('PV',d,1).split('.')[1]}"
 #SRC_URI = "http://www.cmake.org/files/v${CMAKE_MAJOR_VERSION}/cmake-${PV}.tar.gz \
-SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/cmake-${PV}.tar.gz \
+#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/cmake-${PV}.tar.gz \
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/cmake-${PV}.tar.gz \
            file://support-oe-qt4-tools-names.patch"
 
 inherit autotools

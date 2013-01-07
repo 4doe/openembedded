@@ -10,7 +10,8 @@ CFLAGS += "-I${S}/libcap/include"
 LDFLAGS =+ "-L../libcap"
 
 #SRC_URI = "${KERNELORG_MIRROR}/pub/linux/libs/security/linux-privs/libcap2/libcap-${PV}.tar.bz2 \
-SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/libcap-${PV}.tar.bz2 \
+#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/libcap-${PV}.tar.bz2 \
+SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/libcap-${PV}.tar.bz2 \
 	   file://make.patch \
 	"
 
