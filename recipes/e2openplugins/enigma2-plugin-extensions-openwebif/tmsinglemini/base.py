@@ -155,6 +155,8 @@ class BaseController(resource.Resource):
 			ret["remote"] = "single"
 		elif ret["box"] == "tmsingle1":
 			ret["remote"] = "single1"
+		elif ret["box"] = "tmsinglemini":
+			ret["remote"] = "singlemini"
 		elif ret["box"] == "2t":
 			ret["remote"] = "2t"
 		elif ret["box"] == "twin":
