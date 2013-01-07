@@ -33,7 +33,7 @@ SRC_URI_append_tm2toe = " \
 SRC_URI_append_tmsingle = " \
 						 file://skin.xml \
 						 "
-SRC_URI_append_tmsingle1 = " \
+SRC_URI_append_tmsinglemini= " \
 						 file://skin.xml \
 						 "
 
@@ -104,7 +104,7 @@ do_install_append_tmsingle() {
 	chmod -R a+rX ${D}/usr/share/enigma2/
 	install -m 0755 ${WORKDIR}/skin.xml ${D}/usr/share/enigma2/PLi-HD/
 }
-do_install_append_tmsingle1() {
+do_install_append_tmsinglemini() {
 	install -d ${D}/usr/share
 	install -d ${D}/usr/share/enigma2/PLi-HD/
 	cp -rp ${S}/usr/share/* ${D}/usr/share/
