@@ -192,6 +192,9 @@ fakeroot do_rootfs () {
 	elif [ "${MACHINE}" == "tmsingle" ];then
 			echo "insert tmsingle "
 			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
+	elif [ "${MACHINE}" == "tmsingle1" ];then
+			echo "insert tmsingle1 "
+			tar xf ${DEPLOY_DIR_IMAGE}/${MODULES_IMAGE_BASE_NAME}.tgz -C ${IMAGE_ROOTFS}
 	fi
 	mkdir -p ${IMAGE_ROOTFS}/etc
 
