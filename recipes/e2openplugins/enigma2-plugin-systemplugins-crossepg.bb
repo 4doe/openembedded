@@ -36,7 +36,7 @@ SRC_URI_append_tmsingle = " \
 						file://crossepg_menu.py \ 
 						file://plugin.py \
 						 "
-SRC_URI_append_tmsingle1 = " \
+SRC_URI_append_tmsinglemini = " \
 						file://crossepg_menu.py \ 
 						file://plugin.py \
 						 "
@@ -91,7 +91,7 @@ do_install_append_tmsingle() {
 	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
 	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/
 }
-do_install_append_tmsingle1() {
+do_install_append_tmsinglemini() {
 	oe_runmake 'D=${D}' install
 	install -m 0644 ${WORKDIR}/crossepg_menu.py ${D}${PLUGINPATH}/
 	install -m 0644 ${WORKDIR}/plugin.py ${D}${PLUGINPATH}/
