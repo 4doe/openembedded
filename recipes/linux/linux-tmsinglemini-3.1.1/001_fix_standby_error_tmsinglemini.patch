@@ -1,12 +1,101 @@
+diff -urN linux-3.1.1/arch/mips/brcmstb/board.c linux-3.1.1.diff/arch/mips/brcmstb/board.c
+--- linux-3.1.1/arch/mips/brcmstb/board.c	2012-09-18 16:12:55.000000000 +0900
++++ linux-3.1.1.diff/arch/mips/brcmstb/board.c	2013-01-08 18:13:36.913551418 +0900
+@@ -729,13 +729,25 @@
+ 
+ static struct mtd_partition fixed_partition_map[] = {
+ #if TMTWIN
++#ifdef BRCM_HAS_NOR
+     { name: N_TMTWIN,	offset: 0x0,					size: 0x2d<<20 },	
+     { name: N_ROOTFS,	offset: 0x2d<<20,				size: 0xbe<<20 },	
+     { name: "bcmdrv",	offset: 0xeb<<20,				size: 0x0b<<20 },	
+     { name: "nkernel",	offset: 0xf6<<20,				size: 0x09<<20 }	
+ #else
++    { name: "rootfs",       offset: 0,			            size: (256-8-2-3-1)<<20 },
++    { name: "kernel",       offset: 0x0F200000,             size: 8<<20 },
++    { name: "splash",       offset: 0x0FA00000,             size: 2<<20 },
++#if 0		// should enable?
++    { name: "cfe",          offset: 0x0FC00000,             size: 1<<20 },
++    { name: "mac",          offset: 0x0FD00000,             size: 1<<19 },
++    { name: "env",          offset: 0x0FD80000,             size: 1<<19 },
++    { name: "nvm",          offset: 0x0FE00000,             size: 1<<20 },
++#endif
++#endif
++#else
+     /* name                 offset          size */
+-    { name: "rootfs",               offset: 0,               size: (128-4-2-3-1)<<20 },   /* rootfs is total nand size - 6 M Bytes. referr to cfe. bcm97335_devs.c */
++    { name: "rootfs",       offset: 0,               size: (128-4-2-3-1)<<20 },   /* rootfs is total nand size - 6 M Bytes. referr to cfe. bcm97335_devs.c */
+     { name: "kernel",       offset: 0x07600000,             size: 4<<20 },
+     { name: "boot",         offset: 0x07a00000,             size: 2<<20 },
+     { name: "cfe",          offset: 0x07C00000,             size: 1<<20 },
+@@ -747,7 +759,6 @@
+         /* Add 1 extra place-holder partition for splash, and a safety guard element */
+         /*        {name: NULL, offset: 0, size: 0},*/
+ #endif
+-
+ };
+ 
+ 
+diff -urN linux-3.1.1/arch/mips/brcmstb/Kconfig linux-3.1.1.diff/arch/mips/brcmstb/Kconfig
+--- linux-3.1.1/arch/mips/brcmstb/Kconfig	2012-09-18 16:12:55.000000000 +0900
++++ linux-3.1.1.diff/arch/mips/brcmstb/Kconfig	2013-01-08 18:14:06.653549831 +0900
+@@ -232,7 +232,6 @@
+ 	select BRCM_HAS_PCI23
+ 	select BRCM_HAS_EMAC_0
+ 	select BRCM_HAS_EMAC_1
+-	select BRCM_HAS_NOR
+ 	select BRCM_HAS_NAND_MAJOR_2
+ 	select BRCM_HAS_NAND_MINOR_1
+ 	select BRCM_HAS_SATA2
+@@ -355,6 +354,37 @@
+ 	select BRCM_HAS_UPPER_MEMORY
+ 	select BRCM_HAS_1GB_MEMC0
+ 
++config BCM7346B0
++	bool "7346 Bx"
++	select BRCM_PLATFORM_DEFAULTS
++	select BCM7346
++	select BMIPS5000
++	select BRCM_HAS_XKS01
++	select BRCM_HAS_XI
++	select BRCM_UARTA_IS_16550
++	select BRCM_UARTB_IS_16550
++	select BRCM_UARTC_IS_16550
++	select BRCM_HAS_USB_CAPS
++	select BRCM_HAS_GENET_0
++	select BRCM_HAS_MOCA_11_PLUS
++	select BRCM_HAS_MOCA_MIDRF
++	select BRCM_MOCA_ON_GENET_1
++	select BRCM_GENET_V2
++	select BRCM_HAS_NOR
++	select BRCM_HAS_NAND_MAJOR_5
++	select BRCM_HAS_NAND_MINOR_0
++	select BRCM_HAS_BSPI_V4
++	select BRCM_HAS_SDIO_V1
++	select BRCM_HAS_SATA3
++	select BRCM_HAS_WKTMR
++	select BRCM_HAS_UPPER_MEMORY
++	select BRCM_HAS_1GB_MEMC0
++	select BRCM_HAS_AON
++	select BRCM_PWR_HANDSHAKE_V1
++	select BRCM_HAS_DIGITAL_DDR_PHY
++
++
++
+ config BCM7358A0
+ 	bool "7358 Ax"
+ 	select BRCM_PLATFORM_DEFAULTS
+diff -urN linux-3.1.1/arch/mips/brcmstb/setup.c linux-3.1.1.diff/arch/mips/brcmstb/setup.c
 --- linux-3.1.1/arch/mips/brcmstb/setup.c	2012-09-18 16:12:55.000000000 +0900
-+++ linux-3.1.1.diff/arch/mips/brcmstb/setup.c	2012-09-25 11:02:16.407138422 +0900
++++ linux-3.1.1.diff/arch/mips/brcmstb/setup.c	2013-01-08 18:15:45.813544539 +0900
 @@ -43,8 +43,10 @@
  #include <asm/irq.h>
  #include <asm/cpu-features.h>
  #include <asm/war.h>
 +#include <linux/syscore_ops.h>
  #include <asm/brcmstb/brcmstb.h>
- #define TMTWIN 1
+-#define TMTWIN 1
++#define TMTWIN 0
 +#define TM_PATCH 1
  #ifndef CONFIG_MTD
  /* squash MTD warning on IKOS builds */
@@ -84,3 +173,43 @@
  #ifdef CONFIG_BRCM_IRW_HALT
  	/* ultra low power standby - on wakeup, system will restart */
  	BDEV_WR_F_RB(SUN_TOP_CTRL_GENERAL_CTRL_1, irw_top_sw_pwroff, 0);
+diff -urN linux-3.1.1/arch/mips/kernel/proc.c linux-3.1.1.diff/arch/mips/kernel/proc.c
+--- linux-3.1.1/arch/mips/kernel/proc.c	2012-09-18 16:12:57.000000000 +0900
++++ linux-3.1.1.diff/arch/mips/kernel/proc.c	2013-01-08 18:16:46.325541308 +0900
+@@ -43,6 +43,7 @@
+ 				   mips_get_machine_name());
+ 	}
+ 
++	seq_printf(m, "build target\t\t: dm800\n");
+ 	seq_printf(m, "processor\t\t: %ld\n", n);
+ 	sprintf(fmt, "cpu model\t\t: %%s V%%d.%%d%s\n",
+ 	        cpu_data[n].options & MIPS_CPU_FPU ? "  FPU V%d.%d" : "");
+diff -urN linux-3.1.1/arch/mips/kernel/setup.c linux-3.1.1.diff/arch/mips/kernel/setup.c
+--- linux-3.1.1/arch/mips/kernel/setup.c	2012-09-18 16:12:57.000000000 +0900
++++ linux-3.1.1.diff/arch/mips/kernel/setup.c	2013-01-08 18:17:26.637539155 +0900
+@@ -498,15 +498,25 @@
+         strncpy(hwtype,hwtypeLength,21);
+         pr_info("Found hwtype\n");
+ 		memset(boot_command_line,COMMAND_LINE_SIZE,0);
++#ifdef BRCM_HAS_NOR
+ 		sprintf(boot_command_line,"%s %s", "bmem=112M ubi.mtd=4 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 slab_max_order=0 rootflags=sync",hwtype);
+ 		sprintf(command_line,"%s %s", "bmem=112M ubi.mtd=4 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 slab_max_order=0 rootflags=sync",hwtype);
++#else
++		sprintf(boot_command_line,"%s %s", "bmem=112M ubi.mtd=0 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 slab_max_order=0 rootflags=sync",hwtype);
++		sprintf(command_line,"%s %s", "bmem=112M ubi.mtd=0 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 slab_max_order=0 rootflags=sync",hwtype);
++#endif
+ 	}
+ 	else
+ 	{
+         pr_info("Not  Found hwtypes\n");
+ 		memset(boot_command_line,COMMAND_LINE_SIZE,0);
++#ifdef BRCM_HAS_NOR
+ 		sprintf(boot_command_line,"%s", "bmem=112M ubi.mtd=4 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 rootflags=sync slab_max_order=0 hwtypenum=0");
+ 		sprintf(command_line,"%s", "bmem=112M ubi.mtd=4 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 rootflags=sync slab_max_order=0 hwtypenum=0");
++#else
++		sprintf(boot_command_line,"%s", "bmem=112M ubi.mtd=0 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 rootflags=sync slab_max_order=0 hwtypenum=0");
++		sprintf(command_line,"%s", "bmem=112M ubi.mtd=0 root=ubi0:rootfs rootfstype=ubifs rw console=ttyS0,115200n8 rootflags=sync slab_max_order=0 hwtypenum=0");
++#endif
+ 	}
+ #endif
+ 
