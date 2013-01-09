@@ -173,17 +173,6 @@ diff -urN linux-3.1.1/arch/mips/brcmstb/setup.c linux-3.1.1.diff/arch/mips/brcms
  #ifdef CONFIG_BRCM_IRW_HALT
  	/* ultra low power standby - on wakeup, system will restart */
  	BDEV_WR_F_RB(SUN_TOP_CTRL_GENERAL_CTRL_1, irw_top_sw_pwroff, 0);
-diff -urN linux-3.1.1/arch/mips/kernel/proc.c linux-3.1.1.diff/arch/mips/kernel/proc.c
---- linux-3.1.1/arch/mips/kernel/proc.c	2012-09-18 16:12:57.000000000 +0900
-+++ linux-3.1.1.diff/arch/mips/kernel/proc.c	2013-01-08 18:16:46.325541308 +0900
-@@ -43,6 +43,7 @@
- 				   mips_get_machine_name());
- 	}
- 
-+	seq_printf(m, "build target\t\t: dm800\n");
- 	seq_printf(m, "processor\t\t: %ld\n", n);
- 	sprintf(fmt, "cpu model\t\t: %%s V%%d.%%d%s\n",
- 	        cpu_data[n].options & MIPS_CPU_FPU ? "  FPU V%d.%d" : "");
 diff -urN linux-3.1.1/arch/mips/kernel/setup.c linux-3.1.1.diff/arch/mips/kernel/setup.c
 --- linux-3.1.1/arch/mips/kernel/setup.c	2012-09-18 16:12:57.000000000 +0900
 +++ linux-3.1.1.diff/arch/mips/kernel/setup.c	2013-01-08 18:17:26.637539155 +0900
