@@ -33,7 +33,6 @@ ENIGMA2_PLUGINS = " \
 				enigma2-plugin-extensions-shoutcast \
 				enigma2-plugin-extensions-permanenttimeshift \
 				enigma2-plugin-extensions-satelliteequipmentcontrol \
-				enigma2-plugin-extensions-mytube \
 				enigma2-plugin-systemplugins-softwaremanager \
 				enigma2-plugin-systemplugins-crossepg \
 				enigma2-plugin-systemplugins-positionersetup \
