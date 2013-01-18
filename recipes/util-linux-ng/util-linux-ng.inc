@@ -12,8 +12,7 @@ INC_PR = "r36"
 RC ?= ""
 
 #SRC_URI = "${KERNELORG_MIRROR}/pub/linux/utils/util-linux-ng/v${PV}/util-linux-ng-${PV}${RC}.tar.bz2;name=archive"
-#SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/util-linux-ng-${PV}${RC}.tar.bz2;name=archive"
-SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/util-linux-ng-${PV}${RC}.tar.bz2;name=archive"
+SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/util-linux-ng-${PV}${RC}.tar.bz2;name=archive"
 
 SRC_URI_append_chinook-compat = " file://chinook_libtool.patch "
 

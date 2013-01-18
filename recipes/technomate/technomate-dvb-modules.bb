@@ -22,8 +22,7 @@ DOWNLOADMACHINE = "${MACHINE}"
 inherit module
 
 #SRC_URI = "http://archive.vuplus.com/download/drivers/vuplus-dvb-modules-${DOWNLOADMACHINE}-${KV}-${VUPLUS_KERNEL_GCC}-${SRCDATE}.tar.gz"
-#SRC_URI = "http://opengit.homelinux.com/pub/download/drivers/technomate-dvb-modules-${MACHINE}-${KV}-${TECHNOMATE_KERNEL_GCC}-${SRCDATE}.tar.gz"
-SRC_URI = "http://192.168.1.158/pub/download/drivers/technomate-dvb-modules-${MACHINE}-${KV}-${TECHNOMATE_KERNEL_GCC}-${SRCDATE}.tar.gz"
+SRC_URI = "http://opengit.homelinux.com/pub/download/drivers/technomate-dvb-modules-${MACHINE}-${KV}-${TECHNOMATE_KERNEL_GCC}-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
 

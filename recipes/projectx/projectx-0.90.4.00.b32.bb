@@ -10,7 +10,7 @@ PR = "r0"
 SRCDATE = "20090824"
 
 #SRC_URI = "cvs://anonymous@project-x.cvs.sourceforge.net/cvsroot/project-x;module=Project-X;method=pserver\
-SRC_URI = "http://192.168.1.158/pub/OpenPLi/src/Project-X_project-x.cvs.sourceforge.net__${SRCDATE}.tar.gz\		   
+SRC_URI = "http://opengit.homelinux.com/pub/OpenPLi/src/Project-X_project-x.cvs.sourceforge.net__${SRCDATE}.tar.gz\		   
            file://dreambox-headless.patch \
            file://Makefile"
 

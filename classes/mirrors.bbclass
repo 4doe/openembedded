@@ -56,8 +56,8 @@ ftp://.*/.*     http://mirrors.openembedded.org/
 https?$://.*/.* http://mirrors.openembedded.org/
 ftp://.*/.*     http://sources.openembedded.org/
 https?$://.*/.* http://sources.openembedded.org/
-https?$://.*/.* http://192.168.1.158/pub/OpenPLi/src/
-http?$://.*/.* http://192.168.1.158/pub/OpenPLi/src/
+https?$://.*/.* http://opengit.homelinux.com/pub/OpenPLi/src/
+http?$://.*/.* http://opengit.homelinux.com/pub/OpenPLi/src/
 
 }
 

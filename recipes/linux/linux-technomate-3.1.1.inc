@@ -9,8 +9,7 @@ MODULE = "linux-3.1.1"
 DEPENDS = "mtd-minimal-nand-utils"
 RDEPENDS_kernel-image = "mtd-minimal-nand-utils"
 
-#SRC_URI += "http://opengit.homelinux.com/pub/download/kernel/linux-${KV}_${SRCREV}.tar.gz \
-SRC_URI += "http://192.168.1.158/pub/download/kernel/linux-${KV}_${SRCREV}.tar.gz \
+SRC_URI += "http://opengit.homelinux.com/pub/download/kernel/linux-${KV}_${SRCREV}.tar.gz \
 	file://${MACHINE}_defconfig \
 	file://001_fix_standby_error_${MACHINE}.patch \
 		"
